@@ -8,6 +8,7 @@ evaluating them in a newer MetaDrive runtime changes the closed-loop behavior.
 import argparse
 import csv
 import json
+from dataclasses import asdict
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Tuple
@@ -349,6 +350,7 @@ def make_env(seed: int, args: argparse.Namespace) -> Any:
 
 
 def run_mode(frontend: str, args: argparse.Namespace) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
+    reflex_cfg = build_reflex_cfg(args)
     mode = "{}+{}".format(args.algo, frontend)
     rows: List[Dict[str, Any]] = []
     traces: List[Dict[str, Any]] = []
@@ -358,7 +360,7 @@ def run_mode(frontend: str, args: argparse.Namespace) -> Tuple[List[Dict[str, An
         try:
             if policy is None:
                 policy = build_policy(args.algo, str(args.checkpoint), env)
-            reflex = MemristiveRiskReflex(frontend, ReflexCfg(num_lasers=int(args.num_lasers)))
+            reflex = MemristiveRiskReflex(frontend, reflex_cfg)
             state = env.reset()
             done = False
             metrics = EpisodeMetrics()
@@ -437,6 +439,24 @@ def parse_frontends(value: str) -> List[str]:
     return [item.strip() for item in str(value).split(",") if item.strip()]
 
 
+def add_reflex_cfg_args(parser: argparse.ArgumentParser) -> None:
+    defaults = ReflexCfg()
+    for field_name, default_value in asdict(defaults).items():
+        if field_name == "num_lasers":
+            continue
+        parser.add_argument("--{}".format(field_name.replace("_", "-")), type=type(default_value), default=default_value)
+
+
+def build_reflex_cfg(args: argparse.Namespace) -> ReflexCfg:
+    values = {}
+    for field_name, default_value in asdict(ReflexCfg()).items():
+        if field_name == "num_lasers":
+            values[field_name] = int(getattr(args, "num_lasers", default_value))
+        else:
+            values[field_name] = getattr(args, field_name, default_value)
+    return ReflexCfg(**values)
+
+
 def run_self_test() -> None:
     cfg = ReflexCfg(num_lasers=30)
     clear_obs = np.ones(49, dtype=np.float32)
@@ -469,6 +489,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--num-lasers", type=int, default=30)
     parser.add_argument("--write-trace", action="store_true")
     parser.add_argument("--self-test", action="store_true")
+    add_reflex_cfg_args(parser)
     return parser.parse_args()
 
 
@@ -480,6 +501,10 @@ def main() -> None:
     torch.set_num_threads(1)
     args.outdir.mkdir(parents=True, exist_ok=True)
     (args.outdir / "config.json").write_text(json.dumps(vars(args), indent=2, default=str), encoding="utf-8")
+    (args.outdir / "reflex_config.json").write_text(
+        json.dumps(asdict(build_reflex_cfg(args)), indent=2, sort_keys=True),
+        encoding="utf-8",
+    )
     all_rows: List[Dict[str, Any]] = []
     all_traces: List[Dict[str, Any]] = []
     for frontend in parse_frontends(args.frontends):
