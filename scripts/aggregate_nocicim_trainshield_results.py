@@ -180,6 +180,8 @@ def summarize_paired(project, tag, seeds, episodes):
 
 
 def latest_baseline_qpsl(project, baseline_summary, step):
+    if step is None:
+        return None
     path = baseline_summary
     if not path.is_absolute():
         path = project / path
@@ -194,14 +196,30 @@ def latest_baseline_qpsl(project, baseline_summary, step):
     return candidates[-1] if candidates else None
 
 
-def write_comparison(out_dir, training_summary, paired_episode_summary, baseline_row):
+def select_training_comparison_row(training_summary, expected_seed_count, baseline_step=None):
+    if not training_summary:
+        return None
+
+    complete_rows = [
+        row
+        for row in training_summary
+        if expected_seed_count is None or int(row["seed_count"]) == int(expected_seed_count)
+    ]
+    if not complete_rows:
+        return None
+    if baseline_step is not None:
+        step_rows = [row for row in complete_rows if int(row["total_steps"]) == int(baseline_step)]
+        return step_rows[-1] if step_rows else None
+    return complete_rows[-1]
+
+
+def write_comparison(out_dir, training_row, paired_episode_summary, baseline_row):
     rows = []
-    final_train = training_summary[-1] if training_summary else None
-    if final_train:
+    if training_row:
         row = {
             "comparison": "train_eval_nocicim_vs_original_qpsl",
-            "nocicim_success": final_train["EpRet_mean"],
-            "nocicim_cost": final_train["EpCost_mean"],
+            "nocicim_success": training_row["EpRet_mean"],
+            "nocicim_cost": training_row["EpCost_mean"],
             "baseline_success": "",
             "baseline_cost": "",
             "delta_success": "",
@@ -213,8 +231,8 @@ def write_comparison(out_dir, training_summary, paired_episode_summary, baseline
             baseline_cost = float(baseline_row["EpCost_mean"])
             row["baseline_success"] = baseline_success
             row["baseline_cost"] = baseline_cost
-            row["delta_success"] = final_train["EpRet_mean"] - baseline_success
-            row["delta_cost"] = final_train["EpCost_mean"] - baseline_cost
+            row["delta_success"] = training_row["EpRet_mean"] - baseline_success
+            row["delta_cost"] = training_row["EpCost_mean"] - baseline_cost
             row["gate_success_not_lower_and_cost_lower"] = int(
                 row["delta_success"] >= 0.0 and row["delta_cost"] < 0.0
             )
@@ -262,7 +280,7 @@ def main():
     parser.add_argument("--seeds", type=int, default=5)
     parser.add_argument("--paired-eval-episodes", type=int, default=20)
     parser.add_argument("--baseline-summary", type=Path, default=Path("runs/tables/paper_1m_20260629_summary.csv"))
-    parser.add_argument("--baseline-step", type=int, default=1000000)
+    parser.add_argument("--baseline-step", type=int, default=None)
     parser.add_argument("--require-complete", action="store_true")
     args = parser.parse_args()
 
@@ -318,8 +336,12 @@ def main():
     )
     write_csv(out_dir / "missing.csv", [{"missing": item} for item in missing], ["missing"])
 
-    baseline = latest_baseline_qpsl(project, args.baseline_summary, args.baseline_step)
-    write_comparison(out_dir, training_summary, paired_episode_summary, baseline)
+    training_row = select_training_comparison_row(training_summary, args.seeds, args.baseline_step)
+    baseline_step = args.baseline_step
+    if baseline_step is None and training_row:
+        baseline_step = training_row["total_steps"]
+    baseline = latest_baseline_qpsl(project, args.baseline_summary, baseline_step)
+    write_comparison(out_dir, training_row, paired_episode_summary, baseline)
 
     print("wrote {}".format(out_dir))
     print("training_rows={}".format(len(training_summary)))
