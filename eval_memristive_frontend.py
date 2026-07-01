@@ -51,6 +51,11 @@ class ReflexCfg:
     lateral_risk_soft: float = 0.10
     lateral_risk_saturate: float = 0.55
     lateral_guard_threshold: float = 0.55
+    allow_direct_stop: bool = True
+    require_memory_for_stop: bool = False
+    min_front_risk_for_stop: float = 0.0
+    require_risk_for_lateral_guard: bool = False
+    min_lateral_risk_for_guard: float = 0.0
 
 
 @dataclass
@@ -187,6 +192,22 @@ class MemristiveRiskReflex:
         self.x_front = 0.0
         self.x_lateral = 0.0
 
+    def _front_stop_allowed(self, risk: Risk) -> bool:
+        if not bool(self.cfg.allow_direct_stop):
+            return False
+        if float(risk.front_risk) < float(self.cfg.min_front_risk_for_stop):
+            return False
+        if bool(self.cfg.require_memory_for_stop) and self.x_front < float(self.cfg.front_slow_threshold):
+            return False
+        return True
+
+    def _lateral_guard_allowed(self, risk: Risk) -> bool:
+        if not bool(self.cfg.require_risk_for_lateral_guard):
+            return True
+        if float(risk.lateral_risk) >= float(self.cfg.min_lateral_risk_for_guard):
+            return True
+        return self.x_lateral >= float(self.cfg.lateral_guard_threshold)
+
     def apply(self, nominal_action: Any, obs: Any) -> Tuple[np.ndarray, Risk, Dict[str, Any]]:
         nominal = clip_action(nominal_action)
         risk = estimate_risk(obs, self.cfg) if self.mode != "none" else Risk()
@@ -203,7 +224,10 @@ class MemristiveRiskReflex:
         if self.mode == "none":
             return safe, risk, self._finish_debug(nominal, safe, debug)
 
-        if bool(risk.stop_required) or float(risk.front_risk) >= float(self.cfg.stop_front_risk_threshold):
+        if (
+            (bool(risk.stop_required) or float(risk.front_risk) >= float(self.cfg.stop_front_risk_threshold))
+            and self._front_stop_allowed(risk)
+        ):
             safe[1] = min(float(safe[1]), float(self.cfg.stop_brake_value), float(risk.safe_throttle_brake))
         elif float(risk.front_risk) >= float(self.cfg.slow_front_risk_threshold):
             safe[1] = min(float(safe[1]), float(self.cfg.slow_throttle_cap))
@@ -212,7 +236,7 @@ class MemristiveRiskReflex:
             abs(float(nominal[0])) >= float(self.cfg.lateral_steer_threshold)
             and float(nominal[1]) >= float(self.cfg.lateral_throttle_threshold)
         )
-        if high_speed_lateral:
+        if high_speed_lateral and self._lateral_guard_allowed(risk):
             safe[1] = min(float(safe[1]), float(self.cfg.lateral_throttle_cap))
             safe[0] = float(np.clip(float(safe[0]), -float(self.cfg.lateral_steering_cap), float(self.cfg.lateral_steering_cap)))
 
@@ -439,12 +463,24 @@ def parse_frontends(value: str) -> List[str]:
     return [item.strip() for item in str(value).split(",") if item.strip()]
 
 
+def parse_bool(value: Any) -> bool:
+    if isinstance(value, bool):
+        return value
+    normalized = str(value).strip().lower()
+    if normalized in {"1", "true", "yes", "y", "on"}:
+        return True
+    if normalized in {"0", "false", "no", "n", "off"}:
+        return False
+    raise argparse.ArgumentTypeError("expected boolean value, got {}".format(value))
+
+
 def add_reflex_cfg_args(parser: argparse.ArgumentParser) -> None:
     defaults = ReflexCfg()
     for field_name, default_value in asdict(defaults).items():
         if field_name == "num_lasers":
             continue
-        parser.add_argument("--{}".format(field_name.replace("_", "-")), type=type(default_value), default=default_value)
+        value_type = parse_bool if isinstance(default_value, bool) else type(default_value)
+        parser.add_argument("--{}".format(field_name.replace("_", "-")), type=value_type, default=default_value)
 
 
 def build_reflex_cfg(args: argparse.Namespace) -> ReflexCfg:
@@ -468,6 +504,36 @@ def run_self_test() -> None:
     safe, _risk, debug = reflex.apply(np.array([0.9, 0.9], dtype=np.float32), risky_obs)
     assert safe[1] <= 0.0
     assert debug["intervention"] == 1
+    gated_cfg = ReflexCfg(
+        num_lasers=30,
+        require_risk_for_lateral_guard=True,
+        min_lateral_risk_for_guard=0.2,
+        allow_direct_stop=False,
+        stop_distance_m=3.0,
+    )
+    gated_reflex = MemristiveRiskReflex("nocicim_risk_field", gated_cfg)
+    clear_safe, _risk, clear_debug = gated_reflex.apply(np.array([0.99, 1.0], dtype=np.float32), clear_obs)
+    assert clear_safe[1] == 1.0
+    assert clear_debug["intervention"] == 0
+    stop_obs = np.ones(49, dtype=np.float32)
+    stop_obs[-30] = 0.01
+    no_stop_reflex = MemristiveRiskReflex("nocicim_risk_field", gated_cfg)
+    no_stop_safe, _risk, _debug = no_stop_reflex.apply(np.array([0.0, 1.0], dtype=np.float32), stop_obs)
+    assert no_stop_safe[1] > -1.0
+    front_only_cfg = ReflexCfg(
+        num_lasers=30,
+        allow_direct_stop=False,
+        slow_front_risk_threshold=1.01,
+        stop_front_risk_threshold=1.01,
+        require_risk_for_lateral_guard=True,
+        min_lateral_risk_for_guard=0.2,
+    )
+    front_only_reflex = MemristiveRiskReflex("nocicim_risk_field", front_only_cfg)
+    front_only_safe, _risk, front_only_debug = front_only_reflex.apply(
+        np.array([0.99, 1.0], dtype=np.float32), risky_obs
+    )
+    assert front_only_safe[1] == 1.0
+    assert front_only_debug["intervention"] == 0
     assert required_suffixes("td3") == ("_actor", "_actor_optimizer", "_critic", "_critic_optimizer")
     out = Path("logs") / "_memristive_self_test.csv"
     write_csv(out, [{"a": 1}, {"a": 2, "b": 3}])
