@@ -14,6 +14,66 @@ from eval_memristive_frontend import MemristiveRiskReflex, ReflexCfg
 def build_nocicim_reflex_cfg(profile):
     if profile == "default":
         return ReflexCfg()
+    if profile == "micro_guard":
+        return ReflexCfg(
+            front_distance_threshold_m=8.0,
+            stop_distance_m=2.0,
+            lateral_distance_threshold_m=5.0,
+            slow_front_risk_threshold=0.99,
+            stop_front_risk_threshold=0.99,
+            slow_throttle_cap=0.95,
+            lateral_steer_threshold=0.95,
+            lateral_throttle_threshold=0.95,
+            lateral_throttle_cap=0.85,
+            lateral_steering_cap=1.0,
+            front_decay=0.5,
+            front_gain=0.02,
+            front_slow_threshold=0.98,
+            front_slow_throttle_cap=0.95,
+            lateral_decay=0.5,
+            lateral_gain=0.03,
+            lateral_guard_threshold=0.98,
+        )
+    if profile == "soft_front_trim":
+        return ReflexCfg(
+            front_distance_threshold_m=6.0,
+            stop_distance_m=2.0,
+            lateral_distance_threshold_m=1.0,
+            slow_front_risk_threshold=0.70,
+            stop_front_risk_threshold=0.98,
+            slow_throttle_cap=0.85,
+            lateral_steer_threshold=1.01,
+            lateral_throttle_threshold=1.01,
+            lateral_throttle_cap=0.95,
+            lateral_steering_cap=1.0,
+            front_decay=0.60,
+            front_gain=0.03,
+            front_slow_threshold=0.95,
+            front_slow_throttle_cap=0.90,
+            lateral_decay=0.50,
+            lateral_gain=0.0,
+            lateral_guard_threshold=1.01,
+        )
+    if profile == "route_preserve":
+        return ReflexCfg(
+            front_distance_threshold_m=6.0,
+            stop_distance_m=2.0,
+            lateral_distance_threshold_m=3.0,
+            slow_front_risk_threshold=0.85,
+            stop_front_risk_threshold=0.98,
+            slow_throttle_cap=0.90,
+            lateral_steer_threshold=0.85,
+            lateral_throttle_threshold=0.90,
+            lateral_throttle_cap=0.75,
+            lateral_steering_cap=1.0,
+            front_decay=0.65,
+            front_gain=0.04,
+            front_slow_threshold=0.92,
+            front_slow_throttle_cap=0.92,
+            lateral_decay=0.65,
+            lateral_gain=0.04,
+            lateral_guard_threshold=0.95,
+        )
     if profile == "risk_gated_micro_guard":
         return ReflexCfg(
             front_distance_threshold_m=8.0,
@@ -178,7 +238,18 @@ if __name__ == "__main__":
     parser.add_argument("--load_model", default="")  # Model load file name, "" doesn't load, "default" uses file_name
     parser.add_argument("--train_frontend", default="none", choices=["none", "risk_field", "nocicim_risk_field"])
     parser.add_argument("--eval_frontend", default="none", choices=["none", "risk_field", "nocicim_risk_field"])
-    parser.add_argument("--nocicim_profile", default="default", choices=["default", "risk_gated_micro_guard", "front_only_gated"])
+    parser.add_argument(
+        "--nocicim_profile",
+        default="default",
+        choices=[
+            "default",
+            "micro_guard",
+            "soft_front_trim",
+            "route_preserve",
+            "risk_gated_micro_guard",
+            "front_only_gated",
+        ],
+    )
     parser.add_argument("--self_test_nocicim_shield", action="store_true")
 
     args = parser.parse_args()

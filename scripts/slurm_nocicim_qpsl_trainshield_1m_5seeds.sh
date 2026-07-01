@@ -32,11 +32,12 @@ EVAL_EPISODES="${EVAL_EPISODES:-20}"
 BATCH_SIZE="${BATCH_SIZE:-256}"
 PAIRED_EVAL_EPISODES="${PAIRED_EVAL_EPISODES:-20}"
 PAIRED_EVAL_START_SEED="${PAIRED_EVAL_START_SEED:-100}"
+NOCICIM_PROFILE="${NOCICIM_PROFILE:-default}"
 
 SEED="${SLURM_ARRAY_TASK_ID}"
 EXP_NAME="${RUN_TAG}_qpsl_seed${SEED}"
 
-echo "Running NociCIM train-shield QPSL: tag=${RUN_TAG} seed=${SEED} steps=${MAX_TIMESTEPS}"
+echo "Running NociCIM train-shield QPSL: tag=${RUN_TAG} seed=${SEED} steps=${MAX_TIMESTEPS} profile=${NOCICIM_PROFILE}"
 
 python train_metadrive.py \
   --use_qpsl \
@@ -51,7 +52,7 @@ python train_metadrive.py \
   --batch_size "$BATCH_SIZE" \
   --train_frontend nocicim_risk_field \
   --eval_frontend nocicim_risk_field \
-  --nocicim_profile default
+  --nocicim_profile "$NOCICIM_PROFILE"
 
 python eval_memristive_frontend.py \
   --algo qpsl \
