@@ -20,6 +20,15 @@ class NocicimTrainProfileTest(unittest.TestCase):
         self.assertEqual(cfg.front_slow_threshold, 1.01)
         self.assertEqual(cfg.lateral_guard_threshold, 1.01)
 
+    def test_panic_soft_neutral_profile_uses_neutral_stop_clamp(self):
+        cfg = train_metadrive.build_nocicim_reflex_cfg("panic_soft_neutral")
+
+        self.assertEqual(cfg.front_distance_threshold_m, 4.5)
+        self.assertEqual(cfg.stop_distance_m, 1.8)
+        self.assertEqual(cfg.stop_brake_value, 0.0)
+        self.assertEqual(cfg.slow_front_risk_threshold, 1.01)
+        self.assertEqual(cfg.lateral_guard_threshold, 1.01)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -119,6 +119,27 @@ def build_nocicim_reflex_cfg(profile):
             lateral_gain=0.0,
             lateral_guard_threshold=1.01,
         )
+    if profile == "panic_soft_neutral":
+        return ReflexCfg(
+            front_distance_threshold_m=4.5,
+            stop_distance_m=1.8,
+            lateral_distance_threshold_m=1.0,
+            slow_front_risk_threshold=1.01,
+            stop_front_risk_threshold=0.98,
+            stop_brake_value=0.0,
+            slow_throttle_cap=0.98,
+            lateral_steer_threshold=1.01,
+            lateral_throttle_threshold=1.01,
+            lateral_throttle_cap=0.95,
+            lateral_steering_cap=1.0,
+            front_decay=0.5,
+            front_gain=0.02,
+            front_slow_threshold=1.01,
+            front_slow_throttle_cap=0.98,
+            lateral_decay=0.5,
+            lateral_gain=0.0,
+            lateral_guard_threshold=1.01,
+        )
     if profile == "front_only_gated":
         return ReflexCfg(
             front_distance_threshold_m=8.0,
@@ -268,6 +289,7 @@ if __name__ == "__main__":
             "route_preserve",
             "risk_gated_micro_guard",
             "panic_front_only",
+            "panic_soft_neutral",
             "front_only_gated",
         ],
     )

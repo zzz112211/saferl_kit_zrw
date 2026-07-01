@@ -228,7 +228,7 @@ class MemristiveRiskReflex:
             (bool(risk.stop_required) or float(risk.front_risk) >= float(self.cfg.stop_front_risk_threshold))
             and self._front_stop_allowed(risk)
         ):
-            safe[1] = min(float(safe[1]), float(self.cfg.stop_brake_value), float(risk.safe_throttle_brake))
+            safe[1] = min(float(safe[1]), float(self.cfg.stop_brake_value))
         elif float(risk.front_risk) >= float(self.cfg.slow_front_risk_threshold):
             safe[1] = min(float(safe[1]), float(self.cfg.slow_throttle_cap))
 
