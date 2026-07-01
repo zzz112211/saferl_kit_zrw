@@ -27,7 +27,7 @@ export MKL_NUM_THREADS="${SLURM_CPUS_PER_TASK:-2}"
 RUN_TAG="${RUN_TAG:-sweep_qpsl_nocicim_low_intervention_20260701}"
 EPISODES="${EPISODES:-20}"
 START_SEED="${START_SEED:-100}"
-CANDIDATES="${CANDIDATES:-nocicim_panic_front_only,nocicim_panic_soft_neutral,nocicim_soft_front_trim,nocicim_route_preserve,nocicim_micro_guard,nocicim_risk_gated_micro_guard,nocicim_memory_confirmed_stop}"
+CANDIDATES="${CANDIDATES:-nocicim_panic_front_only,nocicim_panic_soft_neutral,nocicim_panic_soft_front_only,nocicim_soft_front_trim,nocicim_route_preserve,nocicim_micro_guard,nocicim_risk_gated_micro_guard,nocicim_memory_confirmed_stop}"
 
 SEED="${SLURM_ARRAY_TASK_ID}"
 
