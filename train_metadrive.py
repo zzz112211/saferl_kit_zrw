@@ -8,13 +8,108 @@ import saferl_algos
 from saferl_plotter.logger import SafeLogger
 import saferl_utils
 from metadrive import SafeMetaDriveEnv
+from eval_memristive_frontend import MemristiveRiskReflex, ReflexCfg
 
 
-def eval_policy(policy, policy_type, eval_env, seed, eval_episodes=20):
+def build_nocicim_reflex_cfg(profile):
+    if profile == "default":
+        return ReflexCfg()
+    if profile == "risk_gated_micro_guard":
+        return ReflexCfg(
+            front_distance_threshold_m=8.0,
+            stop_distance_m=2.0,
+            lateral_distance_threshold_m=5.0,
+            slow_front_risk_threshold=0.99,
+            stop_front_risk_threshold=0.99,
+            slow_throttle_cap=0.95,
+            lateral_steer_threshold=0.95,
+            lateral_throttle_threshold=0.95,
+            lateral_throttle_cap=0.85,
+            lateral_steering_cap=1.0,
+            front_decay=0.5,
+            front_gain=0.02,
+            front_slow_threshold=0.98,
+            front_slow_throttle_cap=0.95,
+            lateral_decay=0.5,
+            lateral_gain=0.03,
+            lateral_guard_threshold=0.98,
+            allow_direct_stop=True,
+            require_memory_for_stop=False,
+            min_front_risk_for_stop=0.95,
+            require_risk_for_lateral_guard=True,
+            min_lateral_risk_for_guard=0.2,
+        )
+    if profile == "front_only_gated":
+        return ReflexCfg(
+            front_distance_threshold_m=8.0,
+            stop_distance_m=2.0,
+            lateral_distance_threshold_m=1.0,
+            slow_front_risk_threshold=0.99,
+            stop_front_risk_threshold=0.99,
+            slow_throttle_cap=0.95,
+            lateral_steer_threshold=1.01,
+            lateral_throttle_threshold=1.01,
+            lateral_throttle_cap=0.95,
+            lateral_steering_cap=1.0,
+            front_decay=0.5,
+            front_gain=0.02,
+            front_slow_threshold=0.98,
+            front_slow_throttle_cap=0.95,
+            lateral_decay=0.5,
+            lateral_gain=0.0,
+            lateral_guard_threshold=1.01,
+            allow_direct_stop=True,
+            require_memory_for_stop=False,
+            min_front_risk_for_stop=0.99,
+            require_risk_for_lateral_guard=True,
+            min_lateral_risk_for_guard=1.01,
+        )
+    raise ValueError("unknown nocicim profile: {}".format(profile))
+
+
+def build_action_shield(frontend, profile):
+    if frontend == "none":
+        return None
+    if frontend not in {"risk_field", "nocicim_risk_field"}:
+        raise ValueError("unsupported frontend: {}".format(frontend))
+    return MemristiveRiskReflex(frontend, build_nocicim_reflex_cfg(profile))
+
+
+def apply_action_shield(shield, action, state):
+    if shield is None:
+        return action, 0, 0.0
+    safe_action, _risk, debug = shield.apply(action, state)
+    return safe_action, int(debug["intervention"]), float(debug["action_distortion"])
+
+
+def run_nocicim_shield_self_test():
+    clear_obs = np.ones(49, dtype=np.float32)
+    risky_obs = np.ones(49, dtype=np.float32)
+    risky_obs[-30] = 0.01
+    action = np.array([0.9, 0.9], dtype=np.float32)
+    no_shield_action, intervention, distortion = apply_action_shield(None, action, clear_obs)
+    assert np.allclose(no_shield_action, action)
+    assert intervention == 0
+    assert distortion == 0.0
+    shield = build_action_shield("nocicim_risk_field", "default")
+    safe_action, intervention, distortion = apply_action_shield(shield, action, risky_obs)
+    assert safe_action[1] <= 0.0
+    assert intervention == 1
+    assert distortion > 0.0
+    shield = build_action_shield("nocicim_risk_field", "front_only_gated")
+    first, _intervention, _distortion = apply_action_shield(shield, action, clear_obs)
+    shield = build_action_shield("nocicim_risk_field", "front_only_gated")
+    second, _intervention, _distortion = apply_action_shield(shield, action, clear_obs)
+    assert np.allclose(first, second)
+    print("nocicim shield self-test passed")
+
+
+def eval_policy(policy, policy_type, eval_env, seed, eval_episodes=20, frontend="none", profile="default"):
     avg_reward = 0.
     avg_cost = 0.
     for _ in range(eval_episodes):
         state, done = eval_env.reset(), False
+        shield = build_action_shield(frontend, profile)
         t = 0
         while not (done or t >= eval_env._max_episode_steps):
             if policy_type == 'use_qpsl':
@@ -23,7 +118,8 @@ def eval_policy(policy, policy_type, eval_env, seed, eval_episodes=20):
                 action, raw_action = policy.select_action(np.array(state), recovery=True)
             else:  # default td3
                 action = policy.select_action(np.array(state))
-            state, reward, done, info = eval_env.step(action)
+            executed_action, _intervention, _distortion = apply_action_shield(shield, action, state)
+            state, reward, done, info = eval_env.step(executed_action)
             if info['cost'] != 0:
                 avg_cost += info['cost']
             t = t + 1
@@ -79,8 +175,16 @@ if __name__ == "__main__":
     parser.add_argument("--policy_freq", default=2, type=int)  # Frequency of delayed policy updates
     parser.add_argument("--save_model", action="store_true")  # Save model and optimizer parameters
     parser.add_argument("--load_model", default="")  # Model load file name, "" doesn't load, "default" uses file_name
+    parser.add_argument("--train_frontend", default="none", choices=["none", "risk_field", "nocicim_risk_field"])
+    parser.add_argument("--eval_frontend", default="none", choices=["none", "risk_field", "nocicim_risk_field"])
+    parser.add_argument("--nocicim_profile", default="default", choices=["default", "risk_gated_micro_guard", "front_only_gated"])
+    parser.add_argument("--self_test_nocicim_shield", action="store_true")
 
     args = parser.parse_args()
+
+    if args.self_test_nocicim_shield:
+        run_nocicim_shield_self_test()
+        raise SystemExit(0)
 
     assert [bool(i) for i in [args.use_td3, args.use_epo, args.use_recovery, args.use_qpsl, args.use_lag,
                               args.use_fac]].count(True) == 1, 'Only one option can be True'
@@ -207,6 +311,9 @@ if __name__ == "__main__":
     episode_num = 0
     cost_total = 0
     prev_cost = 0
+    train_shield = build_action_shield(args.train_frontend, args.nocicim_profile)
+    train_interventions = 0
+    train_distortion_sum = 0.0
 
     for t in range(int(args.max_timesteps)):
 
@@ -234,7 +341,10 @@ if __name__ == "__main__":
                 action = policy.select_action(np.array(state), exploration=True)
 
         # Perform action
-        next_state, reward, done, info = env.step(action)
+        executed_action, intervention, distortion = apply_action_shield(train_shield, action, state)
+        train_interventions += intervention
+        train_distortion_sum += distortion
+        next_state, reward, done, info = env.step(executed_action)
 
         # cost value
         cost = info['cost']
@@ -246,13 +356,13 @@ if __name__ == "__main__":
 
         # Store data in replay buffer
         if args.use_td3:
-            replay_buffer.add(state, action, next_state, reward, done_bool)
+            replay_buffer.add(state, executed_action, next_state, reward, done_bool)
         elif args.use_recovery:
-            replay_buffer.add(state, raw_action, action, next_state, reward, cost, done_bool)
+            replay_buffer.add(state, raw_action, executed_action, next_state, reward, cost, done_bool)
         elif args.use_qpsl:
-            replay_buffer.add(state, action, next_state, reward, cost, prev_cost, done_bool)
+            replay_buffer.add(state, executed_action, next_state, reward, cost, prev_cost, done_bool)
         else:
-            replay_buffer.add(state, action, next_state, reward, cost, done_bool)
+            replay_buffer.add(state, executed_action, next_state, reward, cost, done_bool)
 
         state = next_state
         prev_cost = cost
@@ -266,12 +376,17 @@ if __name__ == "__main__":
         if done or episode_timesteps >= env._max_episode_steps:
             print(f"arrive destination: {info['arrive_dest']} ,out of road:{info['out_of_road']}  ", end=' ')
             print(
-                f"Total T: {t + 1} Episode Num: {episode_num + 1} Episode T: {episode_timesteps} Reward: {episode_reward:.3f} Cost: {episode_cost:.3f}")
+                f"Total T: {t + 1} Episode Num: {episode_num + 1} Episode T: {episode_timesteps} "
+                f"Reward: {episode_reward:.3f} Cost: {episode_cost:.3f} "
+                f"ShieldInt: {train_interventions} ShieldDist: {train_distortion_sum:.3f}")
             # Reset environment
             state, done = env.reset(), False
+            train_shield = build_action_shield(args.train_frontend, args.nocicim_profile)
             episode_reward = 0
             episode_cost = 0
             episode_timesteps = 0
+            train_interventions = 0
+            train_distortion_sum = 0.0
             episode_num += 1
             prev_cost = 0
 
@@ -279,10 +394,20 @@ if __name__ == "__main__":
         if (t + 1) % args.eval_freq == 0:
             env.close()
             eval_env = SafeMetaDriveEnv(config=config_test)
-            evalEpRet, evalEpCost = eval_policy(policy, run_policy_type, eval_env, args.seed)
+            evalEpRet, evalEpCost = eval_policy(
+                policy,
+                run_policy_type,
+                eval_env,
+                args.seed,
+                frontend=args.eval_frontend,
+                profile=args.nocicim_profile,
+            )
             eval_env.close()
             env = SafeMetaDriveEnv(config=config_train)
             state, done = env.reset(), False
+            train_shield = build_action_shield(args.train_frontend, args.nocicim_profile)
+            train_interventions = 0
+            train_distortion_sum = 0.0
             logger.update([evalEpRet, evalEpCost, 1.0 * cost_total / t], total_steps=t + 1)
             if args.save_model:
                 policy.save(f"./models/{file_name}")
