@@ -64,6 +64,9 @@ class Risk:
     lateral_risk: float = 0.0
     left_boundary_risk: float = 0.0
     right_boundary_risk: float = 0.0
+    front_distance_m: float = float("inf")
+    left_distance_m: float = float("inf")
+    right_distance_m: float = float("inf")
     stop_required: bool = False
     safe_throttle_brake: float = 1.0
 
@@ -172,6 +175,9 @@ def estimate_risk(obs: Any, cfg: ReflexCfg) -> Risk:
         lateral_risk=max(left_risk, right_risk),
         left_boundary_risk=left_risk,
         right_boundary_risk=right_risk,
+        front_distance_m=front_distance,
+        left_distance_m=left_distance,
+        right_distance_m=right_distance,
         stop_required=stop_required,
         safe_throttle_brake=-1.0 if stop_required else 0.0,
     )
@@ -191,6 +197,13 @@ class MemristiveRiskReflex:
         self.cfg = cfg or ReflexCfg()
         self.x_front = 0.0
         self.x_lateral = 0.0
+        self.prev_front_risk: Optional[float] = None
+        self.prev_lateral_risk: Optional[float] = None
+        self.prev_left_risk: Optional[float] = None
+        self.prev_right_risk: Optional[float] = None
+        self.prev_front_distance_m: Optional[float] = None
+        self.prev_left_distance_m: Optional[float] = None
+        self.prev_right_distance_m: Optional[float] = None
 
     def _front_stop_allowed(self, risk: Risk) -> bool:
         if not bool(self.cfg.allow_direct_stop):
@@ -208,6 +221,28 @@ class MemristiveRiskReflex:
             return True
         return self.x_lateral >= float(self.cfg.lateral_guard_threshold)
 
+    @staticmethod
+    def _trend_write_allowed(
+        current_risk: float,
+        previous_risk: Optional[float],
+        current_distance: float,
+        previous_distance: Optional[float],
+    ) -> bool:
+        if previous_risk is None or previous_distance is None:
+            return True
+        risk_rising = float(current_risk) > float(previous_risk) + 1e-6
+        distance_closing = float(current_distance) < float(previous_distance) - 1e-3
+        return bool(risk_rising or distance_closing)
+
+    def _update_previous_risk(self, risk: Risk) -> None:
+        self.prev_front_risk = float(risk.front_risk)
+        self.prev_lateral_risk = float(risk.lateral_risk)
+        self.prev_left_risk = float(risk.left_boundary_risk)
+        self.prev_right_risk = float(risk.right_boundary_risk)
+        self.prev_front_distance_m = float(risk.front_distance_m)
+        self.prev_left_distance_m = float(risk.left_distance_m)
+        self.prev_right_distance_m = float(risk.right_distance_m)
+
     def apply(self, nominal_action: Any, obs: Any) -> Tuple[np.ndarray, Risk, Dict[str, Any]]:
         nominal = clip_action(nominal_action)
         risk = estimate_risk(obs, self.cfg) if self.mode != "none" else Risk()
@@ -215,11 +250,16 @@ class MemristiveRiskReflex:
         debug: Dict[str, Any] = {
             "risk_front_risk": float(risk.front_risk),
             "risk_lateral_risk": float(risk.lateral_risk),
+            "risk_front_distance_m": float(risk.front_distance_m),
+            "risk_left_distance_m": float(risk.left_distance_m),
+            "risk_right_distance_m": float(risk.right_distance_m),
             "risk_stop_required": int(bool(risk.stop_required)),
             "nocicim_x_front": float(self.x_front),
             "nocicim_x_lateral": float(self.x_lateral),
             "nocicim_front_slow_active": 0,
             "nocicim_lateral_guard_active": 0,
+            "nocicim_front_memory_write": 0,
+            "nocicim_lateral_memory_write": 0,
         }
         if self.mode == "none":
             return safe, risk, self._finish_debug(nominal, safe, debug)
@@ -245,14 +285,40 @@ class MemristiveRiskReflex:
             lateral_stimulus = normalized_stimulus(
                 risk.lateral_risk, self.cfg.lateral_risk_soft, self.cfg.lateral_risk_saturate
             )
-            self.x_front = clip01(float(self.cfg.front_decay) * self.x_front + float(self.cfg.front_gain) * front_stimulus)
+            front_write = self._trend_write_allowed(
+                risk.front_risk,
+                self.prev_front_risk,
+                risk.front_distance_m,
+                self.prev_front_distance_m,
+            )
+            left_write = self._trend_write_allowed(
+                risk.left_boundary_risk,
+                self.prev_left_risk,
+                risk.left_distance_m,
+                self.prev_left_distance_m,
+            )
+            right_write = self._trend_write_allowed(
+                risk.right_boundary_risk,
+                self.prev_right_risk,
+                risk.right_distance_m,
+                self.prev_right_distance_m,
+            )
+            lateral_write = bool(left_write or right_write)
+            self.x_front = clip01(
+                float(self.cfg.front_decay) * self.x_front
+                + (float(self.cfg.front_gain) * front_stimulus if front_write else 0.0)
+            )
             self.x_lateral = clip01(
-                float(self.cfg.lateral_decay) * self.x_lateral + float(self.cfg.lateral_gain) * lateral_stimulus
+                float(self.cfg.lateral_decay) * self.x_lateral
+                + (float(self.cfg.lateral_gain) * lateral_stimulus if lateral_write else 0.0)
             )
             debug["nocicim_x_front"] = float(self.x_front)
             debug["nocicim_x_lateral"] = float(self.x_lateral)
             debug["nocicim_front_stimulus"] = float(front_stimulus)
             debug["nocicim_lateral_stimulus"] = float(lateral_stimulus)
+            debug["nocicim_front_memory_write"] = int(bool(front_write))
+            debug["nocicim_lateral_memory_write"] = int(bool(lateral_write))
+            self._update_previous_risk(risk)
             if self.x_front >= float(self.cfg.front_slow_threshold):
                 safe[1] = min(float(safe[1]), float(self.cfg.front_slow_throttle_cap))
                 debug["nocicim_front_slow_active"] = 1
