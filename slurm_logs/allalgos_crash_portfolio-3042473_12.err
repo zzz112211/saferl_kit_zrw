@@ -1,0 +1,15 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+Traceback (most recent call last):
+  File "/datapool/home/1001900174/home/DYJ/saferl_kit/sweep_memristive_frontend.py", line 580, in <module>
+    main()
+  File "/datapool/home/1001900174/home/DYJ/saferl_kit/sweep_memristive_frontend.py", line 543, in main
+    baseline_rows, _baseline_traces = run_mode("none", build_eval_args(args, {}))
+  File "/datapool/home/1001900174/home/DYJ/saferl_kit/eval_memristive_frontend.py", line 386, in run_mode
+    policy = build_policy(args.algo, str(args.checkpoint), env)
+  File "/datapool/home/1001900174/home/DYJ/saferl_kit/eval_memristive_frontend.py", line 323, in build_policy
+    assert_checkpoint_complete(checkpoint_prefix, algo)
+  File "/datapool/home/1001900174/home/DYJ/saferl_kit/eval_memristive_frontend.py", line 318, in assert_checkpoint_complete
+    raise FileNotFoundError("missing checkpoint files: " + ", ".join(missing))
+FileNotFoundError: missing checkpoint files: models/paper_1m_20260629_rec_seed2_actor, models/paper_1m_20260629_rec_seed2_actor_optimizer, models/paper_1m_20260629_rec_seed2_critic, models/paper_1m_20260629_rec_seed2_critic_optimizer, models/paper_1m_20260629_rec_seed2_C_critic, models/paper_1m_20260629_rec_seed2_C_critic_optimizer, models/paper_1m_20260629_rec_seed2_C_actor, models/paper_1m_20260629_rec_seed2_C_actor_optimizer

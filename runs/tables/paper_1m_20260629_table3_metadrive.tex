@@ -1,0 +1,14 @@
+\begin{table}[t]
+\centering
+\caption{Mean performance with normal 95\% confidence for safety-aware algorithms on MetaDrive.}
+\label{tab:saferlkit_metadrive}
+\begin{tabular}{llccccc}
+\toprule
+Environment & Metric & Safety Layer & Recovery RL & Lagrangian & FAC & EPO \\
+\midrule
+MetaDrive & SuccessRate & \textbf{0.85 \pm 0.08} & 0.75 \pm 0.14 & 0.75 \pm 0.10 & 0.57 \pm 0.06 & 0.77 \pm 0.08 \\
+ & Ep-Cost & 16.35 \pm 2.13 & 14.12 \pm 5.16 & 4.36 \pm 1.21 & \textbf{3.97 \pm 2.13} & 5.35 \pm 1.54 \\
+ & CostRate & 0.043 \pm 0.006 & 0.055 \pm 0.006 & 0.019 \pm 0.003 & \textbf{0.013 \pm 0.001} & 0.015 \pm 0.002 \\
+\bottomrule
+\end{tabular}
+\end{table}

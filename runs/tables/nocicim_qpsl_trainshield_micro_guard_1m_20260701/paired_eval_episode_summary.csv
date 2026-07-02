@@ -1,0 +1,3 @@
+mode,train_seed_count,episodes_total,success_rate,clean_success_rate,mean_reward,mean_episode_cost,mean_cost_rate,crash_rate,out_of_road_rate,out_of_time_rate,intervention_ratio,mean_action_distortion
+qpsl+nocicim_risk_field,5,100,0.7,0.14,294.9776698570148,5.16,0.014266192210551745,0.8,0.18,0.0,0.34366003444520954,0.3523970819618038
+qpsl+none,5,100,0.76,0.08,304.83210773715393,14.15,0.04446644542429117,0.81,0.26,0.0,0.0,0.0

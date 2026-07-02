@@ -1,0 +1,2 @@
+algo_count,expected_algo_count,failure_count,all_success_non_regression,mean_crash_reduced,mean_clean_success_not_lower,baseline_success_rate_mean,nocicim_success_rate_mean,baseline_clean_success_rate_mean,nocicim_clean_success_rate_mean,baseline_crash_rate_mean,nocicim_crash_rate_mean,baseline_mean_cost_rate_mean,nocicim_mean_cost_rate_mean,baseline_out_of_road_rate_mean,nocicim_out_of_road_rate_mean
+5,6,1,0,1,1,0.7247999999999999,0.7331999999999999,0.1332,0.1356,0.7696,0.7668,0.03601113413424405,0.03323420432901479,0.2688,0.2556

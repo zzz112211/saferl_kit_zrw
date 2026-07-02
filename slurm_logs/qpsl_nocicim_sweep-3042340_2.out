@@ -1,0 +1,36 @@
+Running QPSL NociCIM eval sweep: tag=sweep_qpsl_nocicim_low_intervention_20260702 train_seed=2 episodes=20
+Successfully registered the following environments: ['MetaDrive-validation-v0', 'MetaDrive-10env-v0', 'MetaDrive-100envs-v0', 'MetaDrive-1000envs-v0', 'SafeMetaDrive-validation-v0', 'SafeMetaDrive-10env-v0', 'SafeMetaDrive-100envs-v0', 'SafeMetaDrive-1000envs-v0', 'MARLTollgate-v0', 'MARLBottleneck-v0', 'MARLRoundabout-v0', 'MARLIntersection-v0', 'MARLParkingLot-v0', 'MARLMetaDrive-v0'].
+{
+  "algo": "qpsl",
+  "best": {
+    "baseline_dominant_gain": 1,
+    "candidate": "nocicim_route_preserve",
+    "clean_success_delta": 0.1,
+    "clean_success_rate": 0.2,
+    "crash_rate": 0.8,
+    "crash_rate_reduction": 0.0,
+    "episode_cost_reduction": 1.549999999999999,
+    "episodes": 20,
+    "frontend": "nocicim_risk_field",
+    "intervention_ratio": 0.12187027719192178,
+    "mean_action_distortion": 0.061632559826466114,
+    "mean_cost_rate": 0.028605555572676557,
+    "mean_episode_cost": 9.8,
+    "mean_reward": 319.58803427492467,
+    "mode": "qpsl+nocicim_route_preserve",
+    "out_of_road_rate": 0.15,
+    "out_of_road_reduction": 0.05000000000000002,
+    "out_of_time_rate": 0.0,
+    "overrides_json": "{\"front_decay\": 0.65, \"front_distance_threshold_m\": 6.0, \"front_gain\": 0.04, \"front_slow_threshold\": 0.92, \"front_slow_throttle_cap\": 0.92, \"lateral_decay\": 0.65, \"lateral_distance_threshold_m\": 3.0, \"lateral_gain\": 0.04, \"lateral_guard_threshold\": 0.95, \"lateral_steer_threshold\": 0.85, \"lateral_steering_cap\": 1.0, \"lateral_throttle_cap\": 0.75, \"lateral_throttle_threshold\": 0.9, \"slow_front_risk_threshold\": 0.85, \"slow_throttle_cap\": 0.9, \"stop_distance_m\": 2.0, \"stop_front_risk_threshold\": 0.98}",
+    "reward_delta": -7.550973122184189,
+    "safe_success_gain": 1,
+    "score": 11.72245134389079,
+    "success_delta": 0.0,
+    "success_rate": 0.8
+  },
+  "best_frontend": "nocicim_risk_field",
+  "checkpoint": "models/paper_1m_20260629_qpsl_seed2",
+  "episodes": 20,
+  "note": "baseline_dominant_gain means success>=baseline, clean_success>=baseline, and mean episode cost lower than baseline. risk_field_reference is reported only as a reference when included.",
+  "start_seed": 100
+}

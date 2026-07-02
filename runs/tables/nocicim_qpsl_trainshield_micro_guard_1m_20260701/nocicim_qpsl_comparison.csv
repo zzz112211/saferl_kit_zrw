@@ -1,0 +1,3 @@
+comparison,nocicim_success,nocicim_cost,baseline_success,baseline_cost,delta_success,delta_cost,gate_success_not_lower_and_cost_lower
+train_eval_nocicim_vs_original_qpsl,0.79,12.58,0.85,16.35,-0.05999999999999994,-3.7700000000000014,0
+paired_eval_nocicim_vs_same_policy_none,0.7,5.16,0.76,14.15,-0.06000000000000005,-8.99,0

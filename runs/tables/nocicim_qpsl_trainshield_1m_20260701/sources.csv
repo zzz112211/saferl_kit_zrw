@@ -1,0 +1,16 @@
+kind,seed,path,rows
+logger,0,/datapool/home/1001900174/home/DYJ/saferl_kit/logs/nocicim_qpsl_trainshield_1m_20260701_qpsl_seed0_SafeMetaDriveEnv-seed0-0/logger.csv,100
+logger,1,/datapool/home/1001900174/home/DYJ/saferl_kit/logs/nocicim_qpsl_trainshield_1m_20260701_qpsl_seed1_SafeMetaDriveEnv-seed1-0/logger.csv,100
+logger,2,/datapool/home/1001900174/home/DYJ/saferl_kit/logs/nocicim_qpsl_trainshield_1m_20260701_qpsl_seed2_SafeMetaDriveEnv-seed2-0/logger.csv,100
+logger,3,/datapool/home/1001900174/home/DYJ/saferl_kit/logs/nocicim_qpsl_trainshield_1m_20260701_qpsl_seed3_SafeMetaDriveEnv-seed3-0/logger.csv,100
+logger,4,/datapool/home/1001900174/home/DYJ/saferl_kit/logs/nocicim_qpsl_trainshield_1m_20260701_qpsl_seed4_SafeMetaDriveEnv-seed4-0/logger.csv,100
+paired_aggregate,0,/datapool/home/1001900174/home/DYJ/saferl_kit/logs/eval_nocicim_qpsl_trainshield_1m_20260701_qpsl_seed0_20ep/aggregate_matrix.csv,2
+paired_episode,0,/datapool/home/1001900174/home/DYJ/saferl_kit/logs/eval_nocicim_qpsl_trainshield_1m_20260701_qpsl_seed0_20ep/per_episode_matrix.csv,40
+paired_aggregate,1,/datapool/home/1001900174/home/DYJ/saferl_kit/logs/eval_nocicim_qpsl_trainshield_1m_20260701_qpsl_seed1_20ep/aggregate_matrix.csv,2
+paired_episode,1,/datapool/home/1001900174/home/DYJ/saferl_kit/logs/eval_nocicim_qpsl_trainshield_1m_20260701_qpsl_seed1_20ep/per_episode_matrix.csv,40
+paired_aggregate,2,/datapool/home/1001900174/home/DYJ/saferl_kit/logs/eval_nocicim_qpsl_trainshield_1m_20260701_qpsl_seed2_20ep/aggregate_matrix.csv,2
+paired_episode,2,/datapool/home/1001900174/home/DYJ/saferl_kit/logs/eval_nocicim_qpsl_trainshield_1m_20260701_qpsl_seed2_20ep/per_episode_matrix.csv,40
+paired_aggregate,3,/datapool/home/1001900174/home/DYJ/saferl_kit/logs/eval_nocicim_qpsl_trainshield_1m_20260701_qpsl_seed3_20ep/aggregate_matrix.csv,2
+paired_episode,3,/datapool/home/1001900174/home/DYJ/saferl_kit/logs/eval_nocicim_qpsl_trainshield_1m_20260701_qpsl_seed3_20ep/per_episode_matrix.csv,40
+paired_aggregate,4,/datapool/home/1001900174/home/DYJ/saferl_kit/logs/eval_nocicim_qpsl_trainshield_1m_20260701_qpsl_seed4_20ep/aggregate_matrix.csv,2
+paired_episode,4,/datapool/home/1001900174/home/DYJ/saferl_kit/logs/eval_nocicim_qpsl_trainshield_1m_20260701_qpsl_seed4_20ep/per_episode_matrix.csv,40

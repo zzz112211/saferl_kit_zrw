@@ -1,0 +1,35 @@
+Successfully registered the following environments: ['MetaDrive-validation-v0', 'MetaDrive-10env-v0', 'MetaDrive-100envs-v0', 'MetaDrive-1000envs-v0', 'SafeMetaDrive-validation-v0', 'SafeMetaDrive-10env-v0', 'SafeMetaDrive-100envs-v0', 'SafeMetaDrive-1000envs-v0', 'MARLTollgate-v0', 'MARLBottleneck-v0', 'MARLRoundabout-v0', 'MARLIntersection-v0', 'MARLParkingLot-v0', 'MARLMetaDrive-v0'].
+{
+  "algo": "lag",
+  "best": {
+    "baseline_dominant_gain": 0,
+    "candidate": "nocicim_route_preserve",
+    "clean_success_delta": -0.04999999999999999,
+    "clean_success_rate": 0.25,
+    "crash_rate": 0.6,
+    "crash_rate_reduction": 0.0,
+    "episode_cost_reduction": 0.4500000000000002,
+    "episodes": 20,
+    "frontend": "nocicim_risk_field",
+    "intervention_ratio": 0.05128363854614713,
+    "mean_action_distortion": 0.015229072742190116,
+    "mean_cost_rate": 0.010780187916973013,
+    "mean_episode_cost": 3.15,
+    "mean_reward": 292.374828967487,
+    "mode": "lag+nocicim_route_preserve",
+    "out_of_road_rate": 0.3,
+    "out_of_road_reduction": 0.10000000000000003,
+    "out_of_time_rate": 0.0,
+    "overrides_json": "{\"front_decay\": 0.65, \"front_distance_threshold_m\": 6.0, \"front_gain\": 0.04, \"front_slow_threshold\": 0.92, \"front_slow_throttle_cap\": 0.92, \"lateral_decay\": 0.65, \"lateral_distance_threshold_m\": 3.0, \"lateral_gain\": 0.04, \"lateral_guard_threshold\": 0.95, \"lateral_steer_threshold\": 0.85, \"lateral_steering_cap\": 1.0, \"lateral_throttle_cap\": 0.75, \"lateral_throttle_threshold\": 0.9, \"slow_front_risk_threshold\": 0.85, \"slow_throttle_cap\": 0.9, \"stop_distance_m\": 2.0, \"stop_front_risk_threshold\": 0.98}",
+    "reward_delta": 28.385836801845528,
+    "safe_success_gain": 1,
+    "score": 10.319291840092276,
+    "success_delta": 0.09999999999999998,
+    "success_rate": 0.65
+  },
+  "best_frontend": "nocicim_risk_field",
+  "checkpoint": "models/paper_1m_20260629_lag_seed3",
+  "episodes": 20,
+  "note": "baseline_dominant_gain means success>=baseline, clean_success>=baseline, and mean episode cost lower than baseline. risk_field_reference is reported only as a reference when included.",
+  "start_seed": 100
+}

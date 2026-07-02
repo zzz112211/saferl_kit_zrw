@@ -1,0 +1,11 @@
+Running smoke: algo=epo seed=0 task=1
+Successfully registered the following environments: ['MetaDrive-validation-v0', 'MetaDrive-10env-v0', 'MetaDrive-100envs-v0', 'MetaDrive-1000envs-v0', 'SafeMetaDrive-validation-v0', 'SafeMetaDrive-10env-v0', 'SafeMetaDrive-100envs-v0', 'SafeMetaDrive-1000envs-v0', 'MARLTollgate-v0', 'MARLBottleneck-v0', 'MARLRoundabout-v0', 'MARLIntersection-v0', 'MARLParkingLot-v0', 'MARLMetaDrive-v0'].
+arrive destination: False ,out of road:True   Total T: 253 Episode Num: 1 Episode T: 253 Reward: 8.147 Cost: 1.000
+---------------------------------------
+Evaluation over 1 episodes: 0.000 Cost 1.000.             SafeRL used : use_epo
+---------------------------------------
+[34;1m
+Time: 2026-06-29 13:22:06, Time spent from previous logger: 25.312 s[0m
+[34;1mCustomLogger with fileds: ['total_steps', 'EpRet', 'EpCost', 'CostRate'][0m
+[34;1mfieldvalues: [300, 0.0, 1.0, 0.0033444816053511705]
+[0m

@@ -1,0 +1,36 @@
+Running crash-aware NociCIM sweep: tag=eval_allalgos_crash_aware_portfolio_20260702 algo=epo train_seed=2 episodes=20
+Successfully registered the following environments: ['MetaDrive-validation-v0', 'MetaDrive-10env-v0', 'MetaDrive-100envs-v0', 'MetaDrive-1000envs-v0', 'SafeMetaDrive-validation-v0', 'SafeMetaDrive-10env-v0', 'SafeMetaDrive-100envs-v0', 'SafeMetaDrive-1000envs-v0', 'MARLTollgate-v0', 'MARLBottleneck-v0', 'MARLRoundabout-v0', 'MARLIntersection-v0', 'MARLParkingLot-v0', 'MARLMetaDrive-v0'].
+{
+  "algo": "epo",
+  "best": {
+    "baseline_dominant_gain": 1,
+    "candidate": "nocicim_crash_aware_route",
+    "clean_success_delta": 0.0,
+    "clean_success_rate": 0.35,
+    "crash_rate": 0.6,
+    "crash_rate_reduction": 0.050000000000000044,
+    "episode_cost_reduction": 1.8499999999999996,
+    "episodes": 20,
+    "frontend": "nocicim_risk_field",
+    "intervention_ratio": 0.004738370299646592,
+    "mean_action_distortion": 0.0009403750265307966,
+    "mean_cost_rate": 0.007849373947324371,
+    "mean_episode_cost": 2.75,
+    "mean_reward": 335.7281458197391,
+    "mode": "epo+nocicim_crash_aware_route",
+    "out_of_road_rate": 0.15,
+    "out_of_road_reduction": 0.05000000000000002,
+    "out_of_time_rate": 0.0,
+    "overrides_json": "{\"allow_direct_stop\": false, \"front_decay\": 0.62, \"front_distance_threshold_m\": 6.0, \"front_gain\": 0.035, \"front_slow_threshold\": 0.94, \"front_slow_throttle_cap\": 0.92, \"lateral_decay\": 0.62, \"lateral_distance_threshold_m\": 3.0, \"lateral_gain\": 0.035, \"lateral_guard_threshold\": 0.97, \"lateral_steer_threshold\": 0.9, \"lateral_steering_cap\": 1.0, \"lateral_throttle_cap\": 0.8, \"lateral_throttle_threshold\": 0.94, \"min_front_risk_for_stop\": 0.95, \"min_lateral_risk_for_guard\": 0.25, \"require_memory_for_stop\": false, \"require_risk_for_lateral_guard\": true, \"slow_front_risk_threshold\": 0.88, \"slow_throttle_cap\": 0.92, \"stop_distance_m\": 2.0, \"stop_front_risk_threshold\": 0.99}",
+    "reward_delta": 13.171982071700313,
+    "safe_success_gain": 1,
+    "score": 11.858599103585009,
+    "success_delta": 0.04999999999999993,
+    "success_rate": 0.85
+  },
+  "best_frontend": "nocicim_risk_field",
+  "checkpoint": "models/paper_1m_20260629_epo_seed2",
+  "episodes": 20,
+  "note": "baseline_dominant_gain means success>=baseline, clean_success>=baseline, and mean episode cost lower than baseline. risk_field_reference is reported only as a reference when included.",
+  "start_seed": 100
+}

@@ -1,0 +1,2 @@
+algo,reason,baseline_success_rate,candidate_count
+lag,no_success_non_regressing_candidate,0.724,1

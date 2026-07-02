@@ -1,0 +1,19 @@
+Running smoke: algo=qpsl seed=0 task=3
+Successfully registered the following environments: ['MetaDrive-validation-v0', 'MetaDrive-10env-v0', 'MetaDrive-100envs-v0', 'MetaDrive-1000envs-v0', 'SafeMetaDrive-validation-v0', 'SafeMetaDrive-10env-v0', 'SafeMetaDrive-100envs-v0', 'SafeMetaDrive-1000envs-v0', 'MARLTollgate-v0', 'MARLBottleneck-v0', 'MARLRoundabout-v0', 'MARLIntersection-v0', 'MARLParkingLot-v0', 'MARLMetaDrive-v0'].
+arrive destination: False ,out of road:True   Total T: 88 Episode Num: 1 Episode T: 88 Reward: 1.839 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 114 Episode Num: 2 Episode T: 26 Reward: -3.584 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 140 Episode Num: 3 Episode T: 26 Reward: -3.585 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 166 Episode Num: 4 Episode T: 26 Reward: -3.628 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 192 Episode Num: 5 Episode T: 26 Reward: -3.492 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 220 Episode Num: 6 Episode T: 28 Reward: -2.031 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 246 Episode Num: 7 Episode T: 26 Reward: -3.546 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 272 Episode Num: 8 Episode T: 26 Reward: -3.435 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 288 Episode Num: 9 Episode T: 16 Reward: -5.134 Cost: 1.000
+---------------------------------------
+Evaluation over 1 episodes: 0.000 Cost 1.000.             SafeRL used : use_qpsl
+---------------------------------------
+[34;1m
+Time: 2026-06-29 13:23:08, Time spent from previous logger: 26.380 s[0m
+[34;1mCustomLogger with fileds: ['total_steps', 'EpRet', 'EpCost', 'CostRate'][0m
+[34;1mfieldvalues: [300, 0.0, 1.0, 0.030100334448160536]
+[0m

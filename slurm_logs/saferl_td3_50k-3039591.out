@@ -1,0 +1,296 @@
+Successfully registered the following environments: ['MetaDrive-validation-v0', 'MetaDrive-10env-v0', 'MetaDrive-100envs-v0', 'MetaDrive-1000envs-v0', 'SafeMetaDrive-validation-v0', 'SafeMetaDrive-10env-v0', 'SafeMetaDrive-100envs-v0', 'SafeMetaDrive-1000envs-v0', 'MARLTollgate-v0', 'MARLBottleneck-v0', 'MARLRoundabout-v0', 'MARLIntersection-v0', 'MARLParkingLot-v0', 'MARLMetaDrive-v0'].
+arrive destination: False ,out of road:False   Total T: 1000 Episode Num: 1 Episode T: 1000 Reward: 11.286 Cost: 0.000
+arrive destination: False ,out of road:False   Total T: 2000 Episode Num: 2 Episode T: 1000 Reward: 10.763 Cost: 0.000
+arrive destination: False ,out of road:False   Total T: 3000 Episode Num: 3 Episode T: 1000 Reward: 11.735 Cost: 0.000
+arrive destination: False ,out of road:False   Total T: 4000 Episode Num: 4 Episode T: 1000 Reward: 12.685 Cost: 0.000
+arrive destination: False ,out of road:False   Total T: 5000 Episode Num: 5 Episode T: 1000 Reward: 13.266 Cost: 0.000
+---------------------------------------
+Evaluation over 5 episodes: 0.000 Cost 1.000.             SafeRL used : use_td3
+---------------------------------------
+[34;1m
+Time: 2026-06-29 12:08:26, Time spent from previous logger: 31.382 s[0m
+[34;1mCustomLogger with fileds: ['total_steps', 'EpRet', 'EpCost', 'CostRate'][0m
+[34;1mfieldvalues: [5000, 0.0, 1.0, 0.0]
+[0m
+arrive destination: False ,out of road:True   Total T: 5030 Episode Num: 6 Episode T: 30 Reward: -1.727 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 5056 Episode Num: 7 Episode T: 26 Reward: -3.343 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 5088 Episode Num: 8 Episode T: 32 Reward: -3.270 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 5115 Episode Num: 9 Episode T: 27 Reward: -3.572 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 5130 Episode Num: 10 Episode T: 15 Reward: -5.399 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 5157 Episode Num: 11 Episode T: 27 Reward: -2.968 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 5182 Episode Num: 12 Episode T: 25 Reward: -3.472 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 5217 Episode Num: 13 Episode T: 35 Reward: -0.308 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 5260 Episode Num: 14 Episode T: 43 Reward: -2.666 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 5337 Episode Num: 15 Episode T: 77 Reward: 20.650 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 5393 Episode Num: 16 Episode T: 56 Reward: 12.233 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 5438 Episode Num: 17 Episode T: 45 Reward: 10.721 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 5456 Episode Num: 18 Episode T: 18 Reward: -4.610 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 5492 Episode Num: 19 Episode T: 36 Reward: 1.317 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 5535 Episode Num: 20 Episode T: 43 Reward: 6.407 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 5576 Episode Num: 21 Episode T: 41 Reward: 6.430 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 5598 Episode Num: 22 Episode T: 22 Reward: -3.504 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 5636 Episode Num: 23 Episode T: 38 Reward: 5.987 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 5663 Episode Num: 24 Episode T: 27 Reward: -0.794 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 5682 Episode Num: 25 Episode T: 19 Reward: -4.216 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 5717 Episode Num: 26 Episode T: 35 Reward: 4.067 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 5766 Episode Num: 27 Episode T: 49 Reward: 14.446 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 5835 Episode Num: 28 Episode T: 69 Reward: 38.640 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 5886 Episode Num: 29 Episode T: 51 Reward: 17.327 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 5922 Episode Num: 30 Episode T: 36 Reward: 5.098 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 5970 Episode Num: 31 Episode T: 48 Reward: 15.547 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 6049 Episode Num: 32 Episode T: 79 Reward: 61.250 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 6087 Episode Num: 33 Episode T: 38 Reward: 5.767 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 6134 Episode Num: 34 Episode T: 47 Reward: 15.737 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 6205 Episode Num: 35 Episode T: 71 Reward: 44.912 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 6249 Episode Num: 36 Episode T: 44 Reward: 11.012 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 6287 Episode Num: 37 Episode T: 38 Reward: 5.938 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 6329 Episode Num: 38 Episode T: 42 Reward: 8.863 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 6415 Episode Num: 39 Episode T: 86 Reward: 71.862 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 6463 Episode Num: 40 Episode T: 48 Reward: 15.470 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 6500 Episode Num: 41 Episode T: 37 Reward: 5.422 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 6543 Episode Num: 42 Episode T: 43 Reward: 10.405 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 6602 Episode Num: 43 Episode T: 59 Reward: 29.663 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 6638 Episode Num: 44 Episode T: 36 Reward: 5.005 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 6682 Episode Num: 45 Episode T: 44 Reward: 6.387 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 6765 Episode Num: 46 Episode T: 83 Reward: 58.924 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 6808 Episode Num: 47 Episode T: 43 Reward: 9.847 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 6877 Episode Num: 48 Episode T: 69 Reward: 39.944 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 6935 Episode Num: 49 Episode T: 58 Reward: 27.930 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 6982 Episode Num: 50 Episode T: 47 Reward: 11.525 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 7020 Episode Num: 51 Episode T: 38 Reward: 5.560 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 7128 Episode Num: 52 Episode T: 108 Reward: 70.628 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 7214 Episode Num: 53 Episode T: 86 Reward: 60.920 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 7326 Episode Num: 54 Episode T: 112 Reward: 77.423 Cost: 3.000
+arrive destination: False ,out of road:False   Total T: 8326 Episode Num: 55 Episode T: 1000 Reward: 165.002 Cost: 17.000
+arrive destination: False ,out of road:True   Total T: 9066 Episode Num: 56 Episode T: 740 Reward: 281.969 Cost: 33.000
+arrive destination: True ,out of road:False   Total T: 9585 Episode Num: 57 Episode T: 519 Reward: 336.150 Cost: 12.000
+arrive destination: True ,out of road:False   Total T: 9900 Episode Num: 58 Episode T: 315 Reward: 280.291 Cost: 8.000
+arrive destination: False ,out of road:True   Total T: 9998 Episode Num: 59 Episode T: 98 Reward: 60.683 Cost: 9.000
+---------------------------------------
+Evaluation over 5 episodes: 0.800 Cost 10.600.             SafeRL used : use_td3
+---------------------------------------
+[34;1m
+Time: 2026-06-29 12:09:48, Time spent from previous logger: 81.260 s[0m
+[34;1mCustomLogger with fileds: ['total_steps', 'EpRet', 'EpCost', 'CostRate'][0m
+[34;1mfieldvalues: [10000, 0.8, 10.6, 0.013001300130013]
+[0m
+arrive destination: False ,out of road:True   Total T: 10060 Episode Num: 60 Episode T: 62 Reward: 30.000 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 10261 Episode Num: 61 Episode T: 201 Reward: 155.373 Cost: 15.000
+arrive destination: False ,out of road:True   Total T: 10325 Episode Num: 62 Episode T: 64 Reward: 34.860 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 10380 Episode Num: 63 Episode T: 55 Reward: 18.832 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 10457 Episode Num: 64 Episode T: 77 Reward: 33.136 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 10665 Episode Num: 65 Episode T: 208 Reward: 150.165 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 10847 Episode Num: 66 Episode T: 182 Reward: 145.014 Cost: 11.000
+arrive destination: False ,out of road:True   Total T: 10926 Episode Num: 67 Episode T: 79 Reward: 53.626 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 11189 Episode Num: 68 Episode T: 263 Reward: 188.041 Cost: 37.000
+arrive destination: False ,out of road:True   Total T: 11276 Episode Num: 69 Episode T: 87 Reward: 61.512 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 11456 Episode Num: 70 Episode T: 180 Reward: 168.386 Cost: 22.000
+arrive destination: False ,out of road:True   Total T: 11589 Episode Num: 71 Episode T: 133 Reward: 98.817 Cost: 15.000
+arrive destination: False ,out of road:True   Total T: 11673 Episode Num: 72 Episode T: 84 Reward: 62.333 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 11946 Episode Num: 73 Episode T: 273 Reward: 275.178 Cost: 4.000
+arrive destination: False ,out of road:True   Total T: 12060 Episode Num: 74 Episode T: 114 Reward: 98.985 Cost: 11.000
+arrive destination: False ,out of road:True   Total T: 12142 Episode Num: 75 Episode T: 82 Reward: 61.571 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 12222 Episode Num: 76 Episode T: 80 Reward: 54.655 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 12309 Episode Num: 77 Episode T: 87 Reward: 67.111 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 12408 Episode Num: 78 Episode T: 99 Reward: 84.288 Cost: 2.000
+arrive destination: False ,out of road:True   Total T: 12489 Episode Num: 79 Episode T: 81 Reward: 55.935 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 12613 Episode Num: 80 Episode T: 124 Reward: 106.708 Cost: 2.000
+arrive destination: False ,out of road:True   Total T: 12697 Episode Num: 81 Episode T: 84 Reward: 62.374 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 12862 Episode Num: 82 Episode T: 165 Reward: 176.291 Cost: 5.000
+arrive destination: False ,out of road:True   Total T: 12949 Episode Num: 83 Episode T: 87 Reward: 63.415 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 13228 Episode Num: 84 Episode T: 279 Reward: 268.471 Cost: 18.000
+arrive destination: False ,out of road:True   Total T: 13475 Episode Num: 85 Episode T: 247 Reward: 213.698 Cost: 19.000
+arrive destination: False ,out of road:True   Total T: 13547 Episode Num: 86 Episode T: 72 Reward: 45.592 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 13640 Episode Num: 87 Episode T: 93 Reward: 68.215 Cost: 1.000
+arrive destination: True ,out of road:False   Total T: 13905 Episode Num: 88 Episode T: 265 Reward: 300.141 Cost: 29.000
+arrive destination: False ,out of road:True   Total T: 14034 Episode Num: 89 Episode T: 129 Reward: 134.972 Cost: 6.000
+arrive destination: False ,out of road:True   Total T: 14173 Episode Num: 90 Episode T: 139 Reward: 138.556 Cost: 14.000
+arrive destination: False ,out of road:True   Total T: 14314 Episode Num: 91 Episode T: 141 Reward: 157.991 Cost: 4.000
+arrive destination: False ,out of road:True   Total T: 14404 Episode Num: 92 Episode T: 90 Reward: 73.890 Cost: 6.000
+arrive destination: False ,out of road:True   Total T: 14587 Episode Num: 93 Episode T: 183 Reward: 157.334 Cost: 26.000
+arrive destination: False ,out of road:True   Total T: 14683 Episode Num: 94 Episode T: 96 Reward: 80.150 Cost: 4.000
+arrive destination: True ,out of road:False   Total T: 14856 Episode Num: 95 Episode T: 173 Reward: 269.523 Cost: 0.000
+---------------------------------------
+Evaluation over 5 episodes: 0.600 Cost 22.400.             SafeRL used : use_td3
+---------------------------------------
+[34;1m
+Time: 2026-06-29 12:11:12, Time spent from previous logger: 84.814 s[0m
+[34;1mCustomLogger with fileds: ['total_steps', 'EpRet', 'EpCost', 'CostRate'][0m
+[34;1mfieldvalues: [15000, 0.6, 22.4, 0.026935129008600574]
+[0m
+arrive destination: False ,out of road:True   Total T: 15123 Episode Num: 96 Episode T: 267 Reward: 283.294 Cost: 9.000
+arrive destination: False ,out of road:True   Total T: 15277 Episode Num: 97 Episode T: 154 Reward: 202.786 Cost: 7.000
+arrive destination: False ,out of road:True   Total T: 15374 Episode Num: 98 Episode T: 97 Reward: 77.427 Cost: 5.000
+arrive destination: True ,out of road:False   Total T: 15600 Episode Num: 99 Episode T: 226 Reward: 253.133 Cost: 0.000
+arrive destination: False ,out of road:True   Total T: 15829 Episode Num: 100 Episode T: 229 Reward: 203.981 Cost: 16.000
+arrive destination: True ,out of road:False   Total T: 16045 Episode Num: 101 Episode T: 216 Reward: 295.835 Cost: 12.000
+arrive destination: False ,out of road:True   Total T: 16183 Episode Num: 102 Episode T: 138 Reward: 138.230 Cost: 4.000
+arrive destination: False ,out of road:True   Total T: 16355 Episode Num: 103 Episode T: 172 Reward: 175.001 Cost: 18.000
+arrive destination: True ,out of road:False   Total T: 16525 Episode Num: 104 Episode T: 170 Reward: 269.435 Cost: 0.000
+arrive destination: False ,out of road:True   Total T: 16911 Episode Num: 105 Episode T: 386 Reward: 336.305 Cost: 41.000
+arrive destination: True ,out of road:False   Total T: 17146 Episode Num: 106 Episode T: 235 Reward: 294.430 Cost: 19.000
+arrive destination: True ,out of road:False   Total T: 17319 Episode Num: 107 Episode T: 173 Reward: 270.006 Cost: 0.000
+arrive destination: False ,out of road:True   Total T: 17443 Episode Num: 108 Episode T: 124 Reward: 93.407 Cost: 8.000
+arrive destination: False ,out of road:True   Total T: 17552 Episode Num: 109 Episode T: 109 Reward: 73.848 Cost: 8.000
+arrive destination: False ,out of road:True   Total T: 17895 Episode Num: 110 Episode T: 343 Reward: 291.144 Cost: 33.000
+arrive destination: False ,out of road:True   Total T: 18122 Episode Num: 111 Episode T: 227 Reward: 141.601 Cost: 20.000
+arrive destination: True ,out of road:False   Total T: 18544 Episode Num: 112 Episode T: 422 Reward: 368.649 Cost: 21.000
+arrive destination: False ,out of road:True   Total T: 18685 Episode Num: 113 Episode T: 141 Reward: 138.872 Cost: 8.000
+arrive destination: True ,out of road:False   Total T: 18973 Episode Num: 114 Episode T: 288 Reward: 265.074 Cost: 37.000
+arrive destination: False ,out of road:True   Total T: 19065 Episode Num: 115 Episode T: 92 Reward: 65.960 Cost: 1.000
+arrive destination: True ,out of road:False   Total T: 19235 Episode Num: 116 Episode T: 170 Reward: 268.518 Cost: 0.000
+arrive destination: True ,out of road:False   Total T: 19503 Episode Num: 117 Episode T: 268 Reward: 290.119 Cost: 33.000
+arrive destination: False ,out of road:True   Total T: 19615 Episode Num: 118 Episode T: 112 Reward: 99.134 Cost: 7.000
+arrive destination: False ,out of road:True   Total T: 19772 Episode Num: 119 Episode T: 157 Reward: 129.871 Cost: 16.000
+arrive destination: False ,out of road:True   Total T: 19996 Episode Num: 120 Episode T: 224 Reward: 158.659 Cost: 4.000
+---------------------------------------
+Evaluation over 5 episodes: 0.000 Cost 6.800.             SafeRL used : use_td3
+---------------------------------------
+[34;1m
+Time: 2026-06-29 12:12:35, Time spent from previous logger: 82.383 s[0m
+[34;1mCustomLogger with fileds: ['total_steps', 'EpRet', 'EpCost', 'CostRate'][0m
+[34;1mfieldvalues: [20000, 0.0, 6.8, 0.03615180759037952]
+[0m
+arrive destination: False ,out of road:True   Total T: 20084 Episode Num: 121 Episode T: 88 Reward: 61.074 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 20259 Episode Num: 122 Episode T: 175 Reward: 172.693 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 20542 Episode Num: 123 Episode T: 283 Reward: 177.711 Cost: 19.000
+arrive destination: True ,out of road:False   Total T: 20792 Episode Num: 124 Episode T: 250 Reward: 291.315 Cost: 11.000
+arrive destination: False ,out of road:True   Total T: 20960 Episode Num: 125 Episode T: 168 Reward: 148.903 Cost: 5.000
+arrive destination: True ,out of road:False   Total T: 21300 Episode Num: 126 Episode T: 340 Reward: 335.969 Cost: 13.000
+arrive destination: False ,out of road:True   Total T: 21531 Episode Num: 127 Episode T: 231 Reward: 211.013 Cost: 18.000
+arrive destination: False ,out of road:True   Total T: 22089 Episode Num: 128 Episode T: 558 Reward: 436.846 Cost: 37.000
+arrive destination: True ,out of road:False   Total T: 22344 Episode Num: 129 Episode T: 255 Reward: 267.377 Cost: 31.000
+arrive destination: False ,out of road:True   Total T: 22471 Episode Num: 130 Episode T: 127 Reward: 134.204 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 22586 Episode Num: 131 Episode T: 115 Reward: 101.400 Cost: 4.000
+arrive destination: False ,out of road:True   Total T: 22728 Episode Num: 132 Episode T: 142 Reward: 110.840 Cost: 14.000
+arrive destination: False ,out of road:True   Total T: 23049 Episode Num: 133 Episode T: 321 Reward: 363.836 Cost: 8.000
+arrive destination: True ,out of road:False   Total T: 23265 Episode Num: 134 Episode T: 216 Reward: 249.374 Cost: 0.000
+arrive destination: False ,out of road:True   Total T: 23380 Episode Num: 135 Episode T: 115 Reward: 79.646 Cost: 10.000
+arrive destination: True ,out of road:False   Total T: 23557 Episode Num: 136 Episode T: 177 Reward: 269.397 Cost: 5.000
+arrive destination: False ,out of road:True   Total T: 23772 Episode Num: 137 Episode T: 215 Reward: 222.904 Cost: 20.000
+arrive destination: False ,out of road:True   Total T: 23943 Episode Num: 138 Episode T: 171 Reward: 179.280 Cost: 6.000
+arrive destination: False ,out of road:True   Total T: 24077 Episode Num: 139 Episode T: 134 Reward: 163.483 Cost: 3.000
+arrive destination: False ,out of road:True   Total T: 24349 Episode Num: 140 Episode T: 272 Reward: 305.518 Cost: 5.000
+arrive destination: False ,out of road:True   Total T: 24447 Episode Num: 141 Episode T: 98 Reward: 77.820 Cost: 4.000
+arrive destination: True ,out of road:False   Total T: 24744 Episode Num: 142 Episode T: 297 Reward: 359.225 Cost: 22.000
+arrive destination: True ,out of road:False   Total T: 24992 Episode Num: 143 Episode T: 248 Reward: 233.303 Cost: 15.000
+---------------------------------------
+Evaluation over 5 episodes: 0.400 Cost 11.400.             SafeRL used : use_td3
+---------------------------------------
+[34;1m
+Time: 2026-06-29 12:13:57, Time spent from previous logger: 81.824 s[0m
+[34;1mCustomLogger with fileds: ['total_steps', 'EpRet', 'EpCost', 'CostRate'][0m
+[34;1mfieldvalues: [25000, 0.4, 11.4, 0.0390415616624665]
+[0m
+arrive destination: False ,out of road:True   Total T: 25139 Episode Num: 144 Episode T: 147 Reward: 127.773 Cost: 4.000
+arrive destination: False ,out of road:True   Total T: 25305 Episode Num: 145 Episode T: 166 Reward: 155.032 Cost: 8.000
+arrive destination: True ,out of road:False   Total T: 25509 Episode Num: 146 Episode T: 204 Reward: 246.681 Cost: 0.000
+arrive destination: True ,out of road:False   Total T: 25681 Episode Num: 147 Episode T: 172 Reward: 270.053 Cost: 0.000
+arrive destination: False ,out of road:True   Total T: 26227 Episode Num: 148 Episode T: 546 Reward: 69.871 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 26877 Episode Num: 149 Episode T: 650 Reward: 279.306 Cost: 13.000
+arrive destination: True ,out of road:False   Total T: 27337 Episode Num: 150 Episode T: 460 Reward: 367.149 Cost: 46.000
+arrive destination: False ,out of road:True   Total T: 27474 Episode Num: 151 Episode T: 137 Reward: 102.350 Cost: 4.000
+arrive destination: False ,out of road:True   Total T: 27769 Episode Num: 152 Episode T: 295 Reward: 328.138 Cost: 9.000
+arrive destination: False ,out of road:True   Total T: 28016 Episode Num: 153 Episode T: 247 Reward: 249.655 Cost: 13.000
+arrive destination: True ,out of road:False   Total T: 28439 Episode Num: 154 Episode T: 423 Reward: 379.912 Cost: 50.000
+arrive destination: False ,out of road:False   Total T: 29439 Episode Num: 155 Episode T: 1000 Reward: 187.270 Cost: 22.000
+arrive destination: False ,out of road:True   Total T: 29578 Episode Num: 156 Episode T: 139 Reward: 134.413 Cost: 4.000
+arrive destination: False ,out of road:True   Total T: 29671 Episode Num: 157 Episode T: 93 Reward: 77.499 Cost: 6.000
+---------------------------------------
+Evaluation over 5 episodes: 1.000 Cost 48.000.             SafeRL used : use_td3
+---------------------------------------
+[34;1m
+Time: 2026-06-29 12:15:28, Time spent from previous logger: 91.163 s[0m
+[34;1mCustomLogger with fileds: ['total_steps', 'EpRet', 'EpCost', 'CostRate'][0m
+[34;1mfieldvalues: [30000, 1.0, 48.0, 0.03903463448781626]
+[0m
+arrive destination: True ,out of road:False   Total T: 30252 Episode Num: 158 Episode T: 581 Reward: 598.468 Cost: 35.000
+arrive destination: False ,out of road:True   Total T: 30879 Episode Num: 159 Episode T: 627 Reward: 471.414 Cost: 17.000
+arrive destination: False ,out of road:True   Total T: 31157 Episode Num: 160 Episode T: 278 Reward: 232.181 Cost: 16.000
+arrive destination: False ,out of road:True   Total T: 31227 Episode Num: 161 Episode T: 70 Reward: 24.202 Cost: 1.000
+arrive destination: True ,out of road:False   Total T: 31595 Episode Num: 162 Episode T: 368 Reward: 360.712 Cost: 45.000
+arrive destination: True ,out of road:False   Total T: 32026 Episode Num: 163 Episode T: 431 Reward: 398.452 Cost: 48.000
+arrive destination: True ,out of road:False   Total T: 32231 Episode Num: 164 Episode T: 205 Reward: 244.935 Cost: 0.000
+arrive destination: False ,out of road:True   Total T: 32601 Episode Num: 165 Episode T: 370 Reward: 333.708 Cost: 65.000
+arrive destination: False ,out of road:True   Total T: 32736 Episode Num: 166 Episode T: 135 Reward: 134.988 Cost: 1.000
+arrive destination: True ,out of road:False   Total T: 32913 Episode Num: 167 Episode T: 177 Reward: 269.512 Cost: 0.000
+arrive destination: True ,out of road:False   Total T: 33240 Episode Num: 168 Episode T: 327 Reward: 269.079 Cost: 13.000
+arrive destination: True ,out of road:False   Total T: 33492 Episode Num: 169 Episode T: 252 Reward: 295.708 Cost: 11.000
+arrive destination: False ,out of road:True   Total T: 33770 Episode Num: 170 Episode T: 278 Reward: 207.213 Cost: 33.000
+arrive destination: True ,out of road:False   Total T: 34036 Episode Num: 171 Episode T: 266 Reward: 268.486 Cost: 40.000
+arrive destination: False ,out of road:True   Total T: 34297 Episode Num: 172 Episode T: 261 Reward: 312.029 Cost: 15.000
+arrive destination: False ,out of road:True   Total T: 34393 Episode Num: 173 Episode T: 96 Reward: 67.494 Cost: 1.000
+arrive destination: True ,out of road:False   Total T: 34636 Episode Num: 174 Episode T: 243 Reward: 233.191 Cost: 46.000
+arrive destination: False ,out of road:True   Total T: 34770 Episode Num: 175 Episode T: 134 Reward: 134.435 Cost: 3.000
+arrive destination: False ,out of road:True   Total T: 34935 Episode Num: 176 Episode T: 165 Reward: 149.030 Cost: 15.000
+---------------------------------------
+Evaluation over 5 episodes: 0.200 Cost 14.800.             SafeRL used : use_td3
+---------------------------------------
+[34;1m
+Time: 2026-06-29 12:16:51, Time spent from previous logger: 83.310 s[0m
+[34;1mCustomLogger with fileds: ['total_steps', 'EpRet', 'EpCost', 'CostRate'][0m
+[34;1mfieldvalues: [35000, 0.2, 14.8, 0.04460127432212349]
+[0m
+arrive destination: False ,out of road:True   Total T: 35207 Episode Num: 177 Episode T: 272 Reward: 232.389 Cost: 36.000
+arrive destination: False ,out of road:True   Total T: 35400 Episode Num: 178 Episode T: 193 Reward: 222.364 Cost: 16.000
+arrive destination: True ,out of road:False   Total T: 36103 Episode Num: 179 Episode T: 703 Reward: 372.521 Cost: 45.000
+arrive destination: True ,out of road:False   Total T: 36527 Episode Num: 180 Episode T: 424 Reward: 420.271 Cost: 41.000
+arrive destination: True ,out of road:False   Total T: 36782 Episode Num: 181 Episode T: 255 Reward: 294.561 Cost: 14.000
+arrive destination: False ,out of road:True   Total T: 37182 Episode Num: 182 Episode T: 400 Reward: 370.606 Cost: 31.000
+arrive destination: False ,out of road:True   Total T: 37409 Episode Num: 183 Episode T: 227 Reward: 244.933 Cost: 1.000
+arrive destination: True ,out of road:False   Total T: 37891 Episode Num: 184 Episode T: 482 Reward: 371.947 Cost: 84.000
+arrive destination: False ,out of road:True   Total T: 38153 Episode Num: 185 Episode T: 262 Reward: 157.006 Cost: 32.000
+arrive destination: False ,out of road:True   Total T: 38667 Episode Num: 186 Episode T: 514 Reward: 459.233 Cost: 66.000
+arrive destination: True ,out of road:False   Total T: 39426 Episode Num: 187 Episode T: 759 Reward: 512.884 Cost: 73.000
+arrive destination: True ,out of road:False   Total T: 39824 Episode Num: 188 Episode T: 398 Reward: 423.062 Cost: 62.000
+---------------------------------------
+Evaluation over 5 episodes: 0.600 Cost 22.800.             SafeRL used : use_td3
+---------------------------------------
+[34;1m
+Time: 2026-06-29 12:18:20, Time spent from previous logger: 88.820 s[0m
+[34;1mCustomLogger with fileds: ['total_steps', 'EpRet', 'EpCost', 'CostRate'][0m
+[34;1mfieldvalues: [40000, 0.6, 22.8, 0.05197629940748519]
+[0m
+arrive destination: False ,out of road:True   Total T: 40211 Episode Num: 189 Episode T: 387 Reward: 355.542 Cost: 47.000
+arrive destination: False ,out of road:False   Total T: 41211 Episode Num: 190 Episode T: 1000 Reward: 127.716 Cost: 38.000
+arrive destination: True ,out of road:False   Total T: 41474 Episode Num: 191 Episode T: 263 Reward: 294.834 Cost: 34.000
+arrive destination: True ,out of road:False   Total T: 42081 Episode Num: 192 Episode T: 607 Reward: 505.906 Cost: 73.000
+arrive destination: True ,out of road:False   Total T: 42600 Episode Num: 193 Episode T: 519 Reward: 482.899 Cost: 47.000
+arrive destination: True ,out of road:False   Total T: 42892 Episode Num: 194 Episode T: 292 Reward: 295.463 Cost: 15.000
+arrive destination: True ,out of road:False   Total T: 43153 Episode Num: 195 Episode T: 261 Reward: 294.378 Cost: 31.000
+arrive destination: True ,out of road:False   Total T: 43429 Episode Num: 196 Episode T: 276 Reward: 278.755 Cost: 4.000
+arrive destination: True ,out of road:False   Total T: 43727 Episode Num: 197 Episode T: 298 Reward: 357.625 Cost: 23.000
+arrive destination: True ,out of road:False   Total T: 43958 Episode Num: 198 Episode T: 231 Reward: 289.700 Cost: 3.000
+arrive destination: True ,out of road:False   Total T: 44181 Episode Num: 199 Episode T: 223 Reward: 295.923 Cost: 13.000
+arrive destination: True ,out of road:False   Total T: 44639 Episode Num: 200 Episode T: 458 Reward: 406.297 Cost: 58.000
+arrive destination: True ,out of road:False   Total T: 44881 Episode Num: 201 Episode T: 242 Reward: 235.093 Cost: 34.000
+---------------------------------------
+Evaluation over 5 episodes: 1.000 Cost 29.000.             SafeRL used : use_td3
+---------------------------------------
+[34;1m
+Time: 2026-06-29 12:19:44, Time spent from previous logger: 84.631 s[0m
+[34;1mCustomLogger with fileds: ['total_steps', 'EpRet', 'EpCost', 'CostRate'][0m
+[34;1mfieldvalues: [45000, 1.0, 29.0, 0.055156781261805815]
+[0m
+arrive destination: True ,out of road:False   Total T: 45546 Episode Num: 202 Episode T: 665 Reward: 506.095 Cost: 29.000
+arrive destination: True ,out of road:False   Total T: 46296 Episode Num: 203 Episode T: 750 Reward: 421.208 Cost: 87.000
+arrive destination: True ,out of road:False   Total T: 47018 Episode Num: 204 Episode T: 722 Reward: 515.478 Cost: 80.000
+arrive destination: True ,out of road:False   Total T: 47276 Episode Num: 205 Episode T: 258 Reward: 271.702 Cost: 9.000
+arrive destination: False ,out of road:True   Total T: 47360 Episode Num: 206 Episode T: 84 Reward: 61.150 Cost: 1.000
+arrive destination: False ,out of road:True   Total T: 47564 Episode Num: 207 Episode T: 204 Reward: 232.375 Cost: 4.000
+arrive destination: False ,out of road:True   Total T: 47663 Episode Num: 208 Episode T: 99 Reward: 47.579 Cost: 6.000
+arrive destination: True ,out of road:False   Total T: 48047 Episode Num: 209 Episode T: 384 Reward: 408.231 Cost: 0.000
+arrive destination: True ,out of road:False   Total T: 48310 Episode Num: 210 Episode T: 263 Reward: 287.726 Cost: 36.000
+arrive destination: True ,out of road:False   Total T: 48684 Episode Num: 211 Episode T: 374 Reward: 379.918 Cost: 71.000
+arrive destination: True ,out of road:False   Total T: 49107 Episode Num: 212 Episode T: 423 Reward: 374.411 Cost: 92.000
+arrive destination: True ,out of road:False   Total T: 49369 Episode Num: 213 Episode T: 262 Reward: 299.090 Cost: 26.000
+arrive destination: False ,out of road:True   Total T: 49479 Episode Num: 214 Episode T: 110 Reward: 77.446 Cost: 9.000
+arrive destination: False ,out of road:True   Total T: 49858 Episode Num: 215 Episode T: 379 Reward: 357.773 Cost: 23.000
+---------------------------------------
+Evaluation over 5 episodes: 0.200 Cost 25.200.             SafeRL used : use_td3
+---------------------------------------
+[34;1m
+Time: 2026-06-29 12:21:12, Time spent from previous logger: 87.320 s[0m
+[34;1mCustomLogger with fileds: ['total_steps', 'EpRet', 'EpCost', 'CostRate'][0m
+[34;1mfieldvalues: [50000, 0.2, 25.2, 0.059101182023640474]
+[0m

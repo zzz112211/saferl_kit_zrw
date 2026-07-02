@@ -1,0 +1,290 @@
+Running NociCIM train-shield QPSL: tag=nocicim_qpsl_close_range_trainshield_1m_retry_20260702 seed=2 steps=1000000 profile=close_range
+Successfully registered the following environments: ['MetaDrive-validation-v0', 'MetaDrive-10env-v0', 'MetaDrive-100envs-v0', 'MetaDrive-1000envs-v0', 'SafeMetaDrive-validation-v0', 'SafeMetaDrive-10env-v0', 'SafeMetaDrive-100envs-v0', 'SafeMetaDrive-1000envs-v0', 'MARLTollgate-v0', 'MARLBottleneck-v0', 'MARLRoundabout-v0', 'MARLIntersection-v0', 'MARLParkingLot-v0', 'MARLMetaDrive-v0'].
+arrive destination: False ,out of road:False   Total T: 1000 Episode Num: 1 Episode T: 1000 Reward: 11.499 Cost: 0.000 ShieldInt: 23 ShieldDist: 7.810
+arrive destination: False ,out of road:False   Total T: 2000 Episode Num: 2 Episode T: 1000 Reward: 11.549 Cost: 0.000 ShieldInt: 25 ShieldDist: 8.524
+arrive destination: False ,out of road:True   Total T: 2634 Episode Num: 3 Episode T: 634 Reward: 1.504 Cost: 1.000 ShieldInt: 21 ShieldDist: 7.094
+arrive destination: False ,out of road:False   Total T: 3634 Episode Num: 4 Episode T: 1000 Reward: 10.230 Cost: 0.000 ShieldInt: 32 ShieldDist: 11.606
+arrive destination: False ,out of road:False   Total T: 4634 Episode Num: 5 Episode T: 1000 Reward: 10.004 Cost: 0.000 ShieldInt: 37 ShieldDist: 12.745
+arrive destination: False ,out of road:False   Total T: 5634 Episode Num: 6 Episode T: 1000 Reward: 10.892 Cost: 0.000 ShieldInt: 21 ShieldDist: 7.145
+arrive destination: False ,out of road:False   Total T: 6634 Episode Num: 7 Episode T: 1000 Reward: 11.797 Cost: 0.000 ShieldInt: 35 ShieldDist: 12.821
+arrive destination: False ,out of road:False   Total T: 7634 Episode Num: 8 Episode T: 1000 Reward: 12.126 Cost: 0.000 ShieldInt: 43 ShieldDist: 14.698
+arrive destination: False ,out of road:False   Total T: 8634 Episode Num: 9 Episode T: 1000 Reward: 9.656 Cost: 0.000 ShieldInt: 26 ShieldDist: 9.076
+arrive destination: False ,out of road:True   Total T: 9198 Episode Num: 10 Episode T: 564 Reward: 0.163 Cost: 1.000 ShieldInt: 19 ShieldDist: 6.756
+---------------------------------------
+Evaluation over 20 episodes: 0.000 Cost 0.950.             SafeRL used : use_qpsl
+---------------------------------------
+[34;1m
+Time: 2026-07-02 07:10:59, Time spent from previous logger: 72.625 s[0m
+[34;1mCustomLogger with fileds: ['total_steps', 'EpRet', 'EpCost', 'CostRate'][0m
+[34;1mfieldvalues: [10000, 0.0, 0.95, 0.00020002000200020003]
+[0m
+arrive destination: False ,out of road:True   Total T: 10032 Episode Num: 11 Episode T: 834 Reward: 6.972 Cost: 1.000 ShieldInt: 0 ShieldDist: 0.000
+arrive destination: False ,out of road:True   Total T: 10050 Episode Num: 12 Episode T: 18 Reward: -5.219 Cost: 1.000 ShieldInt: 12 ShieldDist: 4.972
+arrive destination: False ,out of road:True   Total T: 10088 Episode Num: 13 Episode T: 38 Reward: -3.079 Cost: 1.000 ShieldInt: 35 ShieldDist: 14.180
+arrive destination: False ,out of road:True   Total T: 10106 Episode Num: 14 Episode T: 18 Reward: -5.325 Cost: 1.000 ShieldInt: 17 ShieldDist: 7.357
+arrive destination: False ,out of road:True   Total T: 10138 Episode Num: 15 Episode T: 32 Reward: -3.379 Cost: 1.000 ShieldInt: 31 ShieldDist: 13.375
+arrive destination: False ,out of road:True   Total T: 10170 Episode Num: 16 Episode T: 32 Reward: -3.406 Cost: 1.000 ShieldInt: 32 ShieldDist: 12.902
+arrive destination: False ,out of road:True   Total T: 10202 Episode Num: 17 Episode T: 32 Reward: -3.471 Cost: 1.000 ShieldInt: 32 ShieldDist: 13.385
+arrive destination: False ,out of road:True   Total T: 10220 Episode Num: 18 Episode T: 18 Reward: -5.325 Cost: 1.000 ShieldInt: 18 ShieldDist: 7.744
+arrive destination: False ,out of road:True   Total T: 10260 Episode Num: 19 Episode T: 40 Reward: -3.194 Cost: 1.000 ShieldInt: 40 ShieldDist: 16.882
+arrive destination: False ,out of road:True   Total T: 10300 Episode Num: 20 Episode T: 40 Reward: 0.244 Cost: 1.000 ShieldInt: 32 ShieldDist: 13.239
+arrive destination: False ,out of road:True   Total T: 10332 Episode Num: 21 Episode T: 32 Reward: -3.374 Cost: 1.000 ShieldInt: 32 ShieldDist: 13.869
+arrive destination: False ,out of road:True   Total T: 10350 Episode Num: 22 Episode T: 18 Reward: -5.293 Cost: 1.000 ShieldInt: 18 ShieldDist: 7.557
+arrive destination: False ,out of road:True   Total T: 10382 Episode Num: 23 Episode T: 32 Reward: -3.353 Cost: 1.000 ShieldInt: 32 ShieldDist: 13.393
+arrive destination: False ,out of road:True   Total T: 10421 Episode Num: 24 Episode T: 39 Reward: -3.283 Cost: 1.000 ShieldInt: 38 ShieldDist: 15.903
+arrive destination: False ,out of road:True   Total T: 10453 Episode Num: 25 Episode T: 32 Reward: -3.444 Cost: 1.000 ShieldInt: 30 ShieldDist: 12.521
+arrive destination: False ,out of road:True   Total T: 10494 Episode Num: 26 Episode T: 41 Reward: -3.326 Cost: 1.000 ShieldInt: 41 ShieldDist: 17.273
+arrive destination: False ,out of road:True   Total T: 10531 Episode Num: 27 Episode T: 37 Reward: 2.256 Cost: 1.000 ShieldInt: 13 ShieldDist: 5.460
+arrive destination: False ,out of road:True   Total T: 10591 Episode Num: 28 Episode T: 60 Reward: 14.537 Cost: 1.000 ShieldInt: 0 ShieldDist: 0.000
+arrive destination: False ,out of road:True   Total T: 10646 Episode Num: 29 Episode T: 55 Reward: 11.206 Cost: 1.000 ShieldInt: 0 ShieldDist: 0.000
+arrive destination: False ,out of road:True   Total T: 10669 Episode Num: 30 Episode T: 23 Reward: -2.797 Cost: 1.000 ShieldInt: 0 ShieldDist: 0.000
+arrive destination: False ,out of road:True   Total T: 10689 Episode Num: 31 Episode T: 20 Reward: -4.070 Cost: 1.000 ShieldInt: 0 ShieldDist: 0.000
+arrive destination: False ,out of road:True   Total T: 10737 Episode Num: 32 Episode T: 48 Reward: 11.670 Cost: 1.000 ShieldInt: 0 ShieldDist: 0.000
+arrive destination: False ,out of road:True   Total T: 10763 Episode Num: 33 Episode T: 26 Reward: -1.856 Cost: 1.000 ShieldInt: 0 ShieldDist: 0.000
+arrive destination: False ,out of road:True   Total T: 10792 Episode Num: 34 Episode T: 29 Reward: -1.028 Cost: 1.000 ShieldInt: 0 ShieldDist: 0.000
+arrive destination: False ,out of road:True   Total T: 10818 Episode Num: 35 Episode T: 26 Reward: -1.308 Cost: 1.000 ShieldInt: 0 ShieldDist: 0.000
+arrive destination: False ,out of road:True   Total T: 10838 Episode Num: 36 Episode T: 20 Reward: -3.929 Cost: 1.000 ShieldInt: 0 ShieldDist: 0.000
+arrive destination: False ,out of road:True   Total T: 10877 Episode Num: 37 Episode T: 39 Reward: 7.151 Cost: 1.000 ShieldInt: 0 ShieldDist: 0.000
+arrive destination: False ,out of road:True   Total T: 10938 Episode Num: 38 Episode T: 61 Reward: 26.724 Cost: 1.000 ShieldInt: 0 ShieldDist: 0.000
+arrive destination: False ,out of road:True   Total T: 10984 Episode Num: 39 Episode T: 46 Reward: 12.824 Cost: 1.000 ShieldInt: 0 ShieldDist: 0.000
+arrive destination: False ,out of road:True   Total T: 11054 Episode Num: 40 Episode T: 70 Reward: 40.465 Cost: 1.000 ShieldInt: 0 ShieldDist: 0.000
+arrive destination: False ,out of road:True   Total T: 11103 Episode Num: 41 Episode T: 49 Reward: 16.058 Cost: 1.000 ShieldInt: 0 ShieldDist: 0.000
+arrive destination: False ,out of road:True   Total T: 11154 Episode Num: 42 Episode T: 51 Reward: 19.466 Cost: 1.000 ShieldInt: 0 ShieldDist: 0.000
+arrive destination: False ,out of road:True   Total T: 11196 Episode Num: 43 Episode T: 42 Reward: 8.253 Cost: 1.000 ShieldInt: 0 ShieldDist: 0.000
+arrive destination: False ,out of road:True   Total T: 11231 Episode Num: 44 Episode T: 35 Reward: 3.006 Cost: 1.000 ShieldInt: 0 ShieldDist: 0.000
+arrive destination: False ,out of road:True   Total T: 11288 Episode Num: 45 Episode T: 57 Reward: 27.158 Cost: 1.000 ShieldInt: 0 ShieldDist: 0.000
+arrive destination: False ,out of road:True   Total T: 11333 Episode Num: 46 Episode T: 45 Reward: 11.722 Cost: 1.000 ShieldInt: 0 ShieldDist: 0.000
+arrive destination: False ,out of road:True   Total T: 11384 Episode Num: 47 Episode T: 51 Reward: 17.525 Cost: 1.000 ShieldInt: 0 ShieldDist: 0.000
+arrive destination: False ,out of road:True   Total T: 11428 Episode Num: 48 Episode T: 44 Reward: 10.762 Cost: 1.000 ShieldInt: 0 ShieldDist: 0.000
+arrive destination: False ,out of road:True   Total T: 11476 Episode Num: 49 Episode T: 48 Reward: 15.272 Cost: 1.000 ShieldInt: 0 ShieldDist: 0.000
+arrive destination: False ,out of road:True   Total T: 11528 Episode Num: 50 Episode T: 52 Reward: 21.401 Cost: 1.000 ShieldInt: 0 ShieldDist: 0.000
+arrive destination: False ,out of road:True   Total T: 11565 Episode Num: 51 Episode T: 37 Reward: 6.069 Cost: 1.000 ShieldInt: 0 ShieldDist: 0.000
+arrive destination: False ,out of road:True   Total T: 11598 Episode Num: 52 Episode T: 33 Reward: 2.903 Cost: 1.000 ShieldInt: 0 ShieldDist: 0.000
+arrive destination: False ,out of road:True   Total T: 11653 Episode Num: 53 Episode T: 55 Reward: 23.333 Cost: 1.000 ShieldInt: 0 ShieldDist: 0.000
+arrive destination: False ,out of road:True   Total T: 11703 Episode Num: 54 Episode T: 50 Reward: 17.516 Cost: 1.000 ShieldInt: 0 ShieldDist: 0.000
+arrive destination: False ,out of road:True   Total T: 11760 Episode Num: 55 Episode T: 57 Reward: 25.079 Cost: 1.000 ShieldInt: 0 ShieldDist: 0.000
+arrive destination: False ,out of road:True   Total T: 11857 Episode Num: 56 Episode T: 97 Reward: 69.343 Cost: 1.000 ShieldInt: 0 ShieldDist: 0.000
+arrive destination: False ,out of road:True   Total T: 11954 Episode Num: 57 Episode T: 97 Reward: 89.696 Cost: 1.000 ShieldInt: 0 ShieldDist: 0.000
+arrive destination: False ,out of road:True   Total T: 11975 Episode Num: 58 Episode T: 21 Reward: -3.665 Cost: 1.000 ShieldInt: 0 ShieldDist: 0.000
+arrive destination: False ,out of road:True   Total T: 12017 Episode Num: 59 Episode T: 42 Reward: 9.403 Cost: 1.000 ShieldInt: 0 ShieldDist: 0.000
+arrive destination: False ,out of road:True   Total T: 12128 Episode Num: 60 Episode T: 111 Reward: 118.332 Cost: 1.000 ShieldInt: 1 ShieldDist: 0.304
+arrive destination: False ,out of road:True   Total T: 12309 Episode Num: 61 Episode T: 181 Reward: 133.583 Cost: 8.000 ShieldInt: 10 ShieldDist: 16.526
+arrive destination: True ,out of road:False   Total T: 12722 Episode Num: 62 Episode T: 413 Reward: 357.989 Cost: 19.000 ShieldInt: 90 ShieldDist: 76.613
+arrive destination: True ,out of road:False   Total T: 13014 Episode Num: 63 Episode T: 292 Reward: 296.216 Cost: 8.000 ShieldInt: 53 ShieldDist: 42.950
+arrive destination: True ,out of road:False   Total T: 13328 Episode Num: 64 Episode T: 314 Reward: 268.045 Cost: 11.000 ShieldInt: 65 ShieldDist: 49.035
+arrive destination: False ,out of road:True   Total T: 13456 Episode Num: 65 Episode T: 128 Reward: 128.031 Cost: 1.000 ShieldInt: 27 ShieldDist: 11.095
+arrive destination: True ,out of road:False   Total T: 13788 Episode Num: 66 Episode T: 332 Reward: 266.463 Cost: 12.000 ShieldInt: 87 ShieldDist: 73.058
+arrive destination: True ,out of road:False   Total T: 14080 Episode Num: 67 Episode T: 292 Reward: 315.254 Cost: 14.000 ShieldInt: 49 ShieldDist: 34.030
+arrive destination: False ,out of road:True   Total T: 14201 Episode Num: 68 Episode T: 121 Reward: 130.481 Cost: 1.000 ShieldInt: 13 ShieldDist: 5.421
+arrive destination: True ,out of road:False   Total T: 14452 Episode Num: 69 Episode T: 251 Reward: 233.260 Cost: 14.000 ShieldInt: 23 ShieldDist: 28.115
+arrive destination: False ,out of road:True   Total T: 14680 Episode Num: 70 Episode T: 228 Reward: 237.084 Cost: 4.000 ShieldInt: 71 ShieldDist: 32.731
+arrive destination: True ,out of road:False   Total T: 14871 Episode Num: 71 Episode T: 191 Reward: 268.854 Cost: 3.000 ShieldInt: 19 ShieldDist: 10.046
+arrive destination: False ,out of road:True   Total T: 14972 Episode Num: 72 Episode T: 101 Reward: 79.590 Cost: 1.000 ShieldInt: 36 ShieldDist: 15.397
+arrive destination: False ,out of road:True   Total T: 15134 Episode Num: 73 Episode T: 162 Reward: 191.078 Cost: 3.000 ShieldInt: 38 ShieldDist: 17.476
+arrive destination: True ,out of road:False   Total T: 15405 Episode Num: 74 Episode T: 271 Reward: 291.822 Cost: 13.000 ShieldInt: 61 ShieldDist: 35.914
+arrive destination: False ,out of road:True   Total T: 15545 Episode Num: 75 Episode T: 140 Reward: 131.829 Cost: 7.000 ShieldInt: 42 ShieldDist: 21.016
+arrive destination: False ,out of road:True   Total T: 15697 Episode Num: 76 Episode T: 152 Reward: 167.611 Cost: 5.000 ShieldInt: 38 ShieldDist: 20.919
+arrive destination: False ,out of road:True   Total T: 15844 Episode Num: 77 Episode T: 147 Reward: 160.661 Cost: 3.000 ShieldInt: 21 ShieldDist: 8.383
+arrive destination: False ,out of road:True   Total T: 15940 Episode Num: 78 Episode T: 96 Reward: 78.865 Cost: 1.000 ShieldInt: 25 ShieldDist: 10.558
+arrive destination: False ,out of road:True   Total T: 16083 Episode Num: 79 Episode T: 143 Reward: 133.327 Cost: 4.000 ShieldInt: 41 ShieldDist: 30.542
+arrive destination: False ,out of road:True   Total T: 16162 Episode Num: 80 Episode T: 79 Reward: 55.954 Cost: 1.000 ShieldInt: 10 ShieldDist: 4.228
+arrive destination: True ,out of road:False   Total T: 16449 Episode Num: 81 Episode T: 287 Reward: 295.886 Cost: 17.000 ShieldInt: 63 ShieldDist: 56.133
+arrive destination: False ,out of road:True   Total T: 16566 Episode Num: 82 Episode T: 117 Reward: 93.566 Cost: 2.000 ShieldInt: 34 ShieldDist: 14.648
+arrive destination: False ,out of road:True   Total T: 16750 Episode Num: 83 Episode T: 184 Reward: 132.801 Cost: 4.000 ShieldInt: 80 ShieldDist: 35.337
+arrive destination: True ,out of road:False   Total T: 17020 Episode Num: 84 Episode T: 270 Reward: 292.036 Cost: 14.000 ShieldInt: 55 ShieldDist: 37.359
+arrive destination: False ,out of road:True   Total T: 17115 Episode Num: 85 Episode T: 95 Reward: 67.420 Cost: 1.000 ShieldInt: 31 ShieldDist: 13.543
+arrive destination: False ,out of road:True   Total T: 17246 Episode Num: 86 Episode T: 131 Reward: 147.209 Cost: 3.000 ShieldInt: 27 ShieldDist: 12.972
+arrive destination: True ,out of road:False   Total T: 17549 Episode Num: 87 Episode T: 303 Reward: 294.530 Cost: 17.000 ShieldInt: 68 ShieldDist: 58.360
+arrive destination: False ,out of road:True   Total T: 17638 Episode Num: 88 Episode T: 89 Reward: 73.279 Cost: 1.000 ShieldInt: 15 ShieldDist: 6.549
+arrive destination: False ,out of road:True   Total T: 17817 Episode Num: 89 Episode T: 179 Reward: 145.037 Cost: 12.000 ShieldInt: 42 ShieldDist: 36.970
+arrive destination: False ,out of road:True   Total T: 18016 Episode Num: 90 Episode T: 199 Reward: 186.192 Cost: 8.000 ShieldInt: 36 ShieldDist: 34.038
+arrive destination: False ,out of road:True   Total T: 18141 Episode Num: 91 Episode T: 125 Reward: 134.423 Cost: 1.000 ShieldInt: 27 ShieldDist: 11.784
+arrive destination: True ,out of road:False   Total T: 18445 Episode Num: 92 Episode T: 304 Reward: 355.196 Cost: 11.000 ShieldInt: 77 ShieldDist: 46.442
+arrive destination: True ,out of road:False   Total T: 18707 Episode Num: 93 Episode T: 262 Reward: 294.266 Cost: 24.000 ShieldInt: 52 ShieldDist: 41.774
+arrive destination: False ,out of road:True   Total T: 18802 Episode Num: 94 Episode T: 95 Reward: 75.769 Cost: 1.000 ShieldInt: 30 ShieldDist: 12.408
+arrive destination: False ,out of road:True   Total T: 18979 Episode Num: 95 Episode T: 177 Reward: 167.177 Cost: 3.000 ShieldInt: 36 ShieldDist: 19.929
+arrive destination: False ,out of road:True   Total T: 19134 Episode Num: 96 Episode T: 155 Reward: 173.207 Cost: 5.000 ShieldInt: 38 ShieldDist: 16.477
+arrive destination: True ,out of road:False   Total T: 19334 Episode Num: 97 Episode T: 200 Reward: 269.616 Cost: 7.000 ShieldInt: 26 ShieldDist: 14.358
+arrive destination: False ,out of road:True   Total T: 19466 Episode Num: 98 Episode T: 132 Reward: 132.808 Cost: 1.000 ShieldInt: 39 ShieldDist: 16.223
+arrive destination: False ,out of road:True   Total T: 19653 Episode Num: 99 Episode T: 187 Reward: 140.451 Cost: 7.000 ShieldInt: 29 ShieldDist: 23.772
+arrive destination: False ,out of road:True   Total T: 19825 Episode Num: 100 Episode T: 172 Reward: 132.510 Cost: 5.000 ShieldInt: 52 ShieldDist: 25.127
+arrive destination: False ,out of road:True   Total T: 19993 Episode Num: 101 Episode T: 168 Reward: 173.748 Cost: 2.000 ShieldInt: 57 ShieldDist: 25.923
+---------------------------------------
+Evaluation over 20 episodes: 0.150 Cost 7.900.             SafeRL used : use_qpsl
+---------------------------------------
+[34;1m
+Time: 2026-07-02 07:13:33, Time spent from previous logger: 153.840 s[0m
+[34;1mCustomLogger with fileds: ['total_steps', 'EpRet', 'EpCost', 'CostRate'][0m
+[34;1mfieldvalues: [20000, 0.15, 7.9, 0.01655082754137707]
+[0m
+arrive destination: False ,out of road:True   Total T: 20144 Episode Num: 102 Episode T: 151 Reward: 133.164 Cost: 1.000 ShieldInt: 49 ShieldDist: 20.495
+arrive destination: True ,out of road:False   Total T: 20319 Episode Num: 103 Episode T: 175 Reward: 269.052 Cost: 0.000 ShieldInt: 8 ShieldDist: 3.143
+arrive destination: False ,out of road:True   Total T: 20411 Episode Num: 104 Episode T: 92 Reward: 60.710 Cost: 1.000 ShieldInt: 22 ShieldDist: 9.325
+arrive destination: False ,out of road:True   Total T: 20588 Episode Num: 105 Episode T: 177 Reward: 137.995 Cost: 4.000 ShieldInt: 36 ShieldDist: 24.215
+arrive destination: False ,out of road:True   Total T: 20691 Episode Num: 106 Episode T: 103 Reward: 77.441 Cost: 3.000 ShieldInt: 23 ShieldDist: 11.595
+arrive destination: False ,out of road:True   Total T: 20781 Episode Num: 107 Episode T: 90 Reward: 62.412 Cost: 1.000 ShieldInt: 22 ShieldDist: 9.566
+arrive destination: True ,out of road:False   Total T: 20954 Episode Num: 108 Episode T: 173 Reward: 269.932 Cost: 0.000 ShieldInt: 0 ShieldDist: 0.000
+arrive destination: False ,out of road:True   Total T: 21097 Episode Num: 109 Episode T: 143 Reward: 133.243 Cost: 4.000 ShieldInt: 44 ShieldDist: 26.032
+arrive destination: False ,out of road:True   Total T: 21193 Episode Num: 110 Episode T: 96 Reward: 77.780 Cost: 3.000 ShieldInt: 12 ShieldDist: 5.030
+arrive destination: False ,out of road:True   Total T: 21438 Episode Num: 111 Episode T: 245 Reward: 200.608 Cost: 11.000 ShieldInt: 67 ShieldDist: 48.655
+arrive destination: False ,out of road:True   Total T: 21569 Episode Num: 112 Episode T: 131 Reward: 131.844 Cost: 1.000 ShieldInt: 35 ShieldDist: 14.666
+arrive destination: False ,out of road:True   Total T: 21719 Episode Num: 113 Episode T: 150 Reward: 130.403 Cost: 2.000 ShieldInt: 48 ShieldDist: 19.804
+arrive destination: True ,out of road:False   Total T: 22548 Episode Num: 114 Episode T: 829 Reward: 418.207 Cost: 37.000 ShieldInt: 420 ShieldDist: 678.129
+arrive destination: False ,out of road:True   Total T: 22868 Episode Num: 115 Episode T: 320 Reward: 289.381 Cost: 6.000 ShieldInt: 68 ShieldDist: 45.110
+arrive destination: False ,out of road:True   Total T: 23154 Episode Num: 116 Episode T: 286 Reward: 222.379 Cost: 10.000 ShieldInt: 44 ShieldDist: 50.710
+arrive destination: False ,out of road:True   Total T: 23254 Episode Num: 117 Episode T: 100 Reward: 77.318 Cost: 5.000 ShieldInt: 27 ShieldDist: 13.229
+arrive destination: False ,out of road:True   Total T: 23391 Episode Num: 118 Episode T: 137 Reward: 146.574 Cost: 3.000 ShieldInt: 26 ShieldDist: 10.687
+arrive destination: False ,out of road:True   Total T: 23490 Episode Num: 119 Episode T: 99 Reward: 57.950 Cost: 1.000 ShieldInt: 27 ShieldDist: 11.522
+arrive destination: False ,out of road:True   Total T: 23762 Episode Num: 120 Episode T: 272 Reward: 195.738 Cost: 11.000 ShieldInt: 64 ShieldDist: 43.893
+arrive destination: False ,out of road:True   Total T: 23862 Episode Num: 121 Episode T: 100 Reward: 78.890 Cost: 1.000 ShieldInt: 22 ShieldDist: 9.384
+arrive destination: False ,out of road:True   Total T: 23959 Episode Num: 122 Episode T: 97 Reward: 79.400 Cost: 3.000 ShieldInt: 31 ShieldDist: 12.989
+arrive destination: True ,out of road:False   Total T: 24409 Episode Num: 123 Episode T: 450 Reward: 335.295 Cost: 28.000 ShieldInt: 92 ShieldDist: 87.891
+arrive destination: False ,out of road:True   Total T: 24551 Episode Num: 124 Episode T: 142 Reward: 173.121 Cost: 1.000 ShieldInt: 27 ShieldDist: 10.972
+arrive destination: False ,out of road:True   Total T: 24651 Episode Num: 125 Episode T: 100 Reward: 93.387 Cost: 1.000 ShieldInt: 15 ShieldDist: 6.511
+arrive destination: False ,out of road:False   Total T: 25651 Episode Num: 126 Episode T: 1000 Reward: 180.937 Cost: 73.000 ShieldInt: 840 ShieldDist: 1526.277
+arrive destination: False ,out of road:True   Total T: 25733 Episode Num: 127 Episode T: 82 Reward: 55.881 Cost: 1.000 ShieldInt: 12 ShieldDist: 5.261
+arrive destination: False ,out of road:True   Total T: 25908 Episode Num: 128 Episode T: 175 Reward: 174.010 Cost: 1.000 ShieldInt: 32 ShieldDist: 12.574
+arrive destination: True ,out of road:False   Total T: 26086 Episode Num: 129 Episode T: 178 Reward: 268.988 Cost: 0.000 ShieldInt: 17 ShieldDist: 7.179
+arrive destination: True ,out of road:False   Total T: 26349 Episode Num: 130 Episode T: 263 Reward: 295.978 Cost: 11.000 ShieldInt: 25 ShieldDist: 26.162
+arrive destination: False ,out of road:True   Total T: 26496 Episode Num: 131 Episode T: 147 Reward: 154.632 Cost: 1.000 ShieldInt: 39 ShieldDist: 16.876
+arrive destination: True ,out of road:False   Total T: 27111 Episode Num: 132 Episode T: 615 Reward: 499.180 Cost: 41.000 ShieldInt: 140 ShieldDist: 130.668
+arrive destination: False ,out of road:True   Total T: 27256 Episode Num: 133 Episode T: 145 Reward: 154.132 Cost: 1.000 ShieldInt: 28 ShieldDist: 11.552
+arrive destination: True ,out of road:False   Total T: 27570 Episode Num: 134 Episode T: 314 Reward: 267.630 Cost: 9.000 ShieldInt: 69 ShieldDist: 58.897
+arrive destination: False ,out of road:True   Total T: 27700 Episode Num: 135 Episode T: 130 Reward: 126.023 Cost: 11.000 ShieldInt: 29 ShieldDist: 20.128
+arrive destination: True ,out of road:False   Total T: 28330 Episode Num: 136 Episode T: 630 Reward: 416.675 Cost: 34.000 ShieldInt: 141 ShieldDist: 157.088
+arrive destination: True ,out of road:False   Total T: 28603 Episode Num: 137 Episode T: 273 Reward: 294.602 Cost: 24.000 ShieldInt: 61 ShieldDist: 36.701
+arrive destination: False ,out of road:False   Total T: 29603 Episode Num: 138 Episode T: 1000 Reward: 319.352 Cost: 41.000 ShieldInt: 561 ShieldDist: 831.114
+arrive destination: False ,out of road:True   Total T: 29705 Episode Num: 139 Episode T: 102 Reward: 101.978 Cost: 1.000 ShieldInt: 12 ShieldDist: 4.669
+---------------------------------------
+Evaluation over 20 episodes: 0.500 Cost 13.400.             SafeRL used : use_qpsl
+---------------------------------------
+[34;1m
+Time: 2026-07-02 07:16:16, Time spent from previous logger: 163.111 s[0m
+[34;1mCustomLogger with fileds: ['total_steps', 'EpRet', 'EpCost', 'CostRate'][0m
+[34;1mfieldvalues: [30000, 0.5, 13.4, 0.02490083002766759]
+[0m
+arrive destination: True ,out of road:False   Total T: 30564 Episode Num: 140 Episode T: 859 Reward: 492.471 Cost: 64.000 ShieldInt: 176 ShieldDist: 165.290
+arrive destination: False ,out of road:True   Total T: 30820 Episode Num: 141 Episode T: 256 Reward: 196.989 Cost: 3.000 ShieldInt: 74 ShieldDist: 47.802
+arrive destination: False ,out of road:True   Total T: 30942 Episode Num: 142 Episode T: 122 Reward: 128.877 Cost: 1.000 ShieldInt: 30 ShieldDist: 12.426
+arrive destination: True ,out of road:False   Total T: 31330 Episode Num: 143 Episode T: 388 Reward: 398.344 Cost: 6.000 ShieldInt: 77 ShieldDist: 69.526
+arrive destination: False ,out of road:True   Total T: 31690 Episode Num: 144 Episode T: 360 Reward: 208.203 Cost: 23.000 ShieldInt: 117 ShieldDist: 126.544
+arrive destination: False ,out of road:True   Total T: 31808 Episode Num: 145 Episode T: 118 Reward: 129.350 Cost: 1.000 ShieldInt: 23 ShieldDist: 10.052
+arrive destination: False ,out of road:True   Total T: 31935 Episode Num: 146 Episode T: 127 Reward: 129.903 Cost: 1.000 ShieldInt: 44 ShieldDist: 18.778
+arrive destination: False ,out of road:True   Total T: 32059 Episode Num: 147 Episode T: 124 Reward: 131.082 Cost: 4.000 ShieldInt: 22 ShieldDist: 10.805
+arrive destination: True ,out of road:False   Total T: 32310 Episode Num: 148 Episode T: 251 Reward: 233.636 Cost: 9.000 ShieldInt: 72 ShieldDist: 52.118
+arrive destination: False ,out of road:True   Total T: 32853 Episode Num: 149 Episode T: 543 Reward: 235.471 Cost: 35.000 ShieldInt: 226 ShieldDist: 323.057
+arrive destination: False ,out of road:False   Total T: 33853 Episode Num: 150 Episode T: 1000 Reward: 206.175 Cost: 34.000 ShieldInt: 720 ShieldDist: 1074.696
+arrive destination: False ,out of road:True   Total T: 33943 Episode Num: 151 Episode T: 90 Reward: 74.052 Cost: 1.000 ShieldInt: 11 ShieldDist: 4.229
+arrive destination: True ,out of road:False   Total T: 34460 Episode Num: 152 Episode T: 517 Reward: 407.568 Cost: 15.000 ShieldInt: 96 ShieldDist: 83.960
+arrive destination: True ,out of road:False   Total T: 34751 Episode Num: 153 Episode T: 291 Reward: 265.623 Cost: 6.000 ShieldInt: 66 ShieldDist: 40.110
+arrive destination: True ,out of road:False   Total T: 35221 Episode Num: 154 Episode T: 470 Reward: 367.921 Cost: 11.000 ShieldInt: 145 ShieldDist: 84.883
+arrive destination: False ,out of road:True   Total T: 35346 Episode Num: 155 Episode T: 125 Reward: 130.445 Cost: 1.000 ShieldInt: 36 ShieldDist: 14.853
+arrive destination: False ,out of road:False   Total T: 36346 Episode Num: 156 Episode T: 1000 Reward: 142.006 Cost: 8.000 ShieldInt: 858 ShieldDist: 1472.154
+arrive destination: True ,out of road:False   Total T: 36712 Episode Num: 157 Episode T: 366 Reward: 354.328 Cost: 7.000 ShieldInt: 70 ShieldDist: 54.828
+arrive destination: False ,out of road:True   Total T: 36811 Episode Num: 158 Episode T: 99 Reward: 76.881 Cost: 6.000 ShieldInt: 13 ShieldDist: 8.656
+arrive destination: False ,out of road:True   Total T: 36960 Episode Num: 159 Episode T: 149 Reward: 171.275 Cost: 5.000 ShieldInt: 17 ShieldDist: 7.328
+arrive destination: False ,out of road:True   Total T: 37248 Episode Num: 160 Episode T: 288 Reward: 239.201 Cost: 12.000 ShieldInt: 49 ShieldDist: 31.328
+arrive destination: True ,out of road:False   Total T: 37892 Episode Num: 161 Episode T: 644 Reward: 354.016 Cost: 6.000 ShieldInt: 59 ShieldDist: 38.294
+arrive destination: False ,out of road:True   Total T: 38550 Episode Num: 162 Episode T: 658 Reward: 240.445 Cost: 41.000 ShieldInt: 362 ShieldDist: 443.264
+arrive destination: False ,out of road:True   Total T: 38914 Episode Num: 163 Episode T: 364 Reward: 246.799 Cost: 18.000 ShieldInt: 81 ShieldDist: 90.425
+arrive destination: False ,out of road:True   Total T: 39379 Episode Num: 164 Episode T: 465 Reward: 211.491 Cost: 15.000 ShieldInt: 161 ShieldDist: 169.739
+---------------------------------------
+Evaluation over 20 episodes: 0.050 Cost 5.900.             SafeRL used : use_qpsl
+---------------------------------------
+[34;1m
+Time: 2026-07-02 07:19:26, Time spent from previous logger: 189.807 s[0m
+[34;1mCustomLogger with fileds: ['total_steps', 'EpRet', 'EpCost', 'CostRate'][0m
+[34;1mfieldvalues: [40000, 0.05, 5.9, 0.02642566064151604]
+[0m
+arrive destination: False ,out of road:True   Total T: 40277 Episode Num: 165 Episode T: 898 Reward: 363.809 Cost: 9.000 ShieldInt: 27 ShieldDist: 17.936
+arrive destination: False ,out of road:True   Total T: 40887 Episode Num: 166 Episode T: 610 Reward: 76.164 Cost: 1.000 ShieldInt: 5 ShieldDist: 2.194
+arrive destination: False ,out of road:False   Total T: 41887 Episode Num: 167 Episode T: 1000 Reward: 202.311 Cost: 1.000 ShieldInt: 142 ShieldDist: 62.931
+arrive destination: False ,out of road:False   Total T: 42887 Episode Num: 168 Episode T: 1000 Reward: 280.580 Cost: 10.000 ShieldInt: 42 ShieldDist: 22.567
+arrive destination: False ,out of road:False   Total T: 43887 Episode Num: 169 Episode T: 1000 Reward: 428.723 Cost: 24.000 ShieldInt: 286 ShieldDist: 272.393
+arrive destination: False ,out of road:True   Total T: 44049 Episode Num: 170 Episode T: 162 Reward: 142.088 Cost: 14.000 ShieldInt: 27 ShieldDist: 26.999
+arrive destination: True ,out of road:False   Total T: 44885 Episode Num: 171 Episode T: 836 Reward: 294.841 Cost: 30.000 ShieldInt: 146 ShieldDist: 216.091
+arrive destination: True ,out of road:False   Total T: 45207 Episode Num: 172 Episode T: 322 Reward: 296.106 Cost: 5.000 ShieldInt: 31 ShieldDist: 16.994
+arrive destination: True ,out of road:False   Total T: 45649 Episode Num: 173 Episode T: 442 Reward: 262.410 Cost: 0.000 ShieldInt: 71 ShieldDist: 29.380
+arrive destination: False ,out of road:True   Total T: 45764 Episode Num: 174 Episode T: 115 Reward: 58.329 Cost: 10.000 ShieldInt: 23 ShieldDist: 11.498
+arrive destination: False ,out of road:True   Total T: 46045 Episode Num: 175 Episode T: 281 Reward: 222.655 Cost: 8.000 ShieldInt: 30 ShieldDist: 18.147
+arrive destination: False ,out of road:False   Total T: 47045 Episode Num: 176 Episode T: 1000 Reward: 135.143 Cost: 2.000 ShieldInt: 31 ShieldDist: 14.115
+arrive destination: False ,out of road:False   Total T: 48045 Episode Num: 177 Episode T: 1000 Reward: 362.468 Cost: 20.000 ShieldInt: 128 ShieldDist: 84.316
+arrive destination: False ,out of road:False   Total T: 49045 Episode Num: 178 Episode T: 1000 Reward: 128.556 Cost: 3.000 ShieldInt: 121 ShieldDist: 66.524
+---------------------------------------
+Evaluation over 20 episodes: 0.150 Cost 6.550.             SafeRL used : use_qpsl
+---------------------------------------
+[34;1m
+Time: 2026-07-02 07:22:06, Time spent from previous logger: 160.588 s[0m
+[34;1mCustomLogger with fileds: ['total_steps', 'EpRet', 'EpCost', 'CostRate'][0m
+[34;1mfieldvalues: [50000, 0.15, 6.55, 0.02380047600952019]
+[0m
+arrive destination: False ,out of road:False   Total T: 50045 Episode Num: 179 Episode T: 1000 Reward: 262.935 Cost: 2.000 ShieldInt: 0 ShieldDist: 0.000
+arrive destination: False ,out of road:False   Total T: 51045 Episode Num: 180 Episode T: 1000 Reward: 248.857 Cost: 1.000 ShieldInt: 40 ShieldDist: 15.868
+arrive destination: False ,out of road:False   Total T: 52045 Episode Num: 181 Episode T: 1000 Reward: 248.044 Cost: 14.000 ShieldInt: 649 ShieldDist: 1045.262
+arrive destination: False ,out of road:False   Total T: 53045 Episode Num: 182 Episode T: 1000 Reward: 220.849 Cost: 3.000 ShieldInt: 41 ShieldDist: 15.652
+arrive destination: False ,out of road:False   Total T: 54045 Episode Num: 183 Episode T: 1000 Reward: 251.478 Cost: 3.000 ShieldInt: 97 ShieldDist: 49.267
+arrive destination: False ,out of road:True   Total T: 54147 Episode Num: 184 Episode T: 102 Reward: 94.316 Cost: 2.000 ShieldInt: 1 ShieldDist: 0.358
+arrive destination: False ,out of road:True   Total T: 54243 Episode Num: 185 Episode T: 96 Reward: 80.538 Cost: 3.000 ShieldInt: 2 ShieldDist: 0.871
+arrive destination: False ,out of road:True   Total T: 54346 Episode Num: 186 Episode T: 103 Reward: 91.374 Cost: 2.000 ShieldInt: 2 ShieldDist: 0.685
+arrive destination: False ,out of road:False   Total T: 55346 Episode Num: 187 Episode T: 1000 Reward: 110.114 Cost: 1.000 ShieldInt: 78 ShieldDist: 31.873
+arrive destination: False ,out of road:False   Total T: 56346 Episode Num: 188 Episode T: 1000 Reward: 142.677 Cost: 24.000 ShieldInt: 54 ShieldDist: 57.594
+arrive destination: False ,out of road:True   Total T: 56525 Episode Num: 189 Episode T: 179 Reward: 182.607 Cost: 1.000 ShieldInt: 33 ShieldDist: 13.356
+arrive destination: False ,out of road:False   Total T: 57525 Episode Num: 190 Episode T: 1000 Reward: 52.162 Cost: 6.000 ShieldInt: 895 ShieldDist: 1613.220
+arrive destination: False ,out of road:False   Total T: 58525 Episode Num: 191 Episode T: 1000 Reward: 222.347 Cost: 12.000 ShieldInt: 703 ShieldDist: 1161.830
+arrive destination: True ,out of road:False   Total T: 59440 Episode Num: 192 Episode T: 915 Reward: 270.163 Cost: 2.000 ShieldInt: 64 ShieldDist: 25.152
+arrive destination: True ,out of road:False   Total T: 59888 Episode Num: 193 Episode T: 448 Reward: 294.771 Cost: 20.000 ShieldInt: 79 ShieldDist: 57.573
+---------------------------------------
+Evaluation over 20 episodes: 0.550 Cost 15.400.             SafeRL used : use_qpsl
+---------------------------------------
+[34;1m
+Time: 2026-07-02 07:25:00, Time spent from previous logger: 173.247 s[0m
+[34;1mCustomLogger with fileds: ['total_steps', 'EpRet', 'EpCost', 'CostRate'][0m
+[34;1mfieldvalues: [60000, 0.55, 15.4, 0.021417023617060285]
+[0m
+arrive destination: True ,out of road:False   Total T: 60546 Episode Num: 194 Episode T: 658 Reward: 366.740 Cost: 4.000 ShieldInt: 86 ShieldDist: 34.534
+arrive destination: False ,out of road:False   Total T: 61546 Episode Num: 195 Episode T: 1000 Reward: 217.650 Cost: 3.000 ShieldInt: 54 ShieldDist: 27.096
+arrive destination: True ,out of road:False   Total T: 62133 Episode Num: 196 Episode T: 587 Reward: 354.283 Cost: 9.000 ShieldInt: 94 ShieldDist: 65.177
+arrive destination: False ,out of road:True   Total T: 62237 Episode Num: 197 Episode T: 104 Reward: 90.514 Cost: 5.000 ShieldInt: 10 ShieldDist: 10.678
+arrive destination: False ,out of road:True   Total T: 62587 Episode Num: 198 Episode T: 350 Reward: 229.455 Cost: 4.000 ShieldInt: 63 ShieldDist: 42.430
+arrive destination: False ,out of road:True   Total T: 62945 Episode Num: 199 Episode T: 358 Reward: 283.481 Cost: 1.000 ShieldInt: 108 ShieldDist: 64.051
+arrive destination: True ,out of road:False   Total T: 63143 Episode Num: 200 Episode T: 198 Reward: 278.680 Cost: 7.000 ShieldInt: 10 ShieldDist: 6.408
+arrive destination: False ,out of road:False   Total T: 64143 Episode Num: 201 Episode T: 1000 Reward: 216.230 Cost: 4.000 ShieldInt: 40 ShieldDist: 16.054
+arrive destination: False ,out of road:True   Total T: 64741 Episode Num: 202 Episode T: 598 Reward: 152.838 Cost: 8.000 ShieldInt: 348 ShieldDist: 570.592
+arrive destination: True ,out of road:False   Total T: 65210 Episode Num: 203 Episode T: 469 Reward: 286.267 Cost: 15.000 ShieldInt: 62 ShieldDist: 55.589
+arrive destination: True ,out of road:False   Total T: 65948 Episode Num: 204 Episode T: 738 Reward: 354.026 Cost: 8.000 ShieldInt: 121 ShieldDist: 82.949
+arrive destination: True ,out of road:False   Total T: 66488 Episode Num: 205 Episode T: 540 Reward: 371.402 Cost: 9.000 ShieldInt: 67 ShieldDist: 54.055
+arrive destination: False ,out of road:False   Total T: 67488 Episode Num: 206 Episode T: 1000 Reward: 283.082 Cost: 6.000 ShieldInt: 395 ShieldDist: 601.119
+arrive destination: True ,out of road:False   Total T: 68222 Episode Num: 207 Episode T: 734 Reward: 462.420 Cost: 12.000 ShieldInt: 175 ShieldDist: 116.541
+arrive destination: True ,out of road:False   Total T: 68767 Episode Num: 208 Episode T: 545 Reward: 398.622 Cost: 5.000 ShieldInt: 76 ShieldDist: 45.719
+arrive destination: False ,out of road:False   Total T: 69767 Episode Num: 209 Episode T: 1000 Reward: 69.352 Cost: 13.000 ShieldInt: 48 ShieldDist: 58.726
+---------------------------------------
+Evaluation over 20 episodes: 0.650 Cost 15.750.             SafeRL used : use_qpsl
+---------------------------------------
+[34;1m
+Time: 2026-07-02 07:27:46, Time spent from previous logger: 165.932 s[0m
+[34;1mCustomLogger with fileds: ['total_steps', 'EpRet', 'EpCost', 'CostRate'][0m
+[34;1mfieldvalues: [70000, 0.65, 15.75, 0.020143144902070028]
+[0m
+arrive destination: True ,out of road:False   Total T: 70444 Episode Num: 210 Episode T: 677 Reward: 439.223 Cost: 31.000 ShieldInt: 61 ShieldDist: 61.506
+arrive destination: True ,out of road:False   Total T: 70776 Episode Num: 211 Episode T: 332 Reward: 270.440 Cost: 6.000 ShieldInt: 28 ShieldDist: 19.490
+arrive destination: True ,out of road:False   Total T: 71246 Episode Num: 212 Episode T: 470 Reward: 269.837 Cost: 21.000 ShieldInt: 197 ShieldDist: 316.223
+arrive destination: False ,out of road:True   Total T: 71443 Episode Num: 213 Episode T: 197 Reward: 198.179 Cost: 1.000 ShieldInt: 38 ShieldDist: 16.113
+arrive destination: False ,out of road:False   Total T: 72443 Episode Num: 214 Episode T: 1000 Reward: 309.724 Cost: 16.000 ShieldInt: 628 ShieldDist: 997.926
+arrive destination: True ,out of road:False   Total T: 73082 Episode Num: 215 Episode T: 639 Reward: 264.207 Cost: 6.000 ShieldInt: 136 ShieldDist: 64.310
+arrive destination: True ,out of road:False   Total T: 73591 Episode Num: 216 Episode T: 509 Reward: 269.123 Cost: 3.000 ShieldInt: 99 ShieldDist: 43.228
+arrive destination: True ,out of road:False   Total T: 74104 Episode Num: 217 Episode T: 513 Reward: 462.555 Cost: 15.000 ShieldInt: 127 ShieldDist: 69.023
+arrive destination: False ,out of road:True   Total T: 74431 Episode Num: 218 Episode T: 327 Reward: 276.321 Cost: 17.000 ShieldInt: 46 ShieldDist: 41.160
+arrive destination: False ,out of road:True   Total T: 74635 Episode Num: 219 Episode T: 204 Reward: 147.506 Cost: 6.000 ShieldInt: 26 ShieldDist: 15.794
+arrive destination: True ,out of road:False   Total T: 74903 Episode Num: 220 Episode T: 268 Reward: 296.083 Cost: 11.000 ShieldInt: 16 ShieldDist: 10.031
+arrive destination: False ,out of road:True   Total T: 75037 Episode Num: 221 Episode T: 134 Reward: 137.470 Cost: 3.000 ShieldInt: 24 ShieldDist: 11.560
+arrive destination: True ,out of road:False   Total T: 75496 Episode Num: 222 Episode T: 459 Reward: 357.937 Cost: 16.000 ShieldInt: 84 ShieldDist: 84.857
+arrive destination: True ,out of road:False   Total T: 75943 Episode Num: 223 Episode T: 447 Reward: 355.846 Cost: 10.000 ShieldInt: 87 ShieldDist: 61.106
+arrive destination: True ,out of road:False   Total T: 76529 Episode Num: 224 Episode T: 586 Reward: 263.771 Cost: 13.000 ShieldInt: 125 ShieldDist: 67.283
+arrive destination: True ,out of road:False   Total T: 76810 Episode Num: 225 Episode T: 281 Reward: 305.807 Cost: 4.000 ShieldInt: 26 ShieldDist: 27.352
+arrive destination: True ,out of road:False   Total T: 77360 Episode Num: 226 Episode T: 550 Reward: 378.866 Cost: 35.000 ShieldInt: 105 ShieldDist: 81.615
+arrive destination: False ,out of road:True   Total T: 77455 Episode Num: 227 Episode T: 95 Reward: 67.311 Cost: 1.000 ShieldInt: 21 ShieldDist: 8.318
+arrive destination: False ,out of road:True   Total T: 77581 Episode Num: 228 Episode T: 126 Reward: 131.219 Cost: 4.000 ShieldInt: 24 ShieldDist: 11.704
+arrive destination: True ,out of road:False   Total T: 78076 Episode Num: 229 Episode T: 495 Reward: 234.173 Cost: 6.000 ShieldInt: 47 ShieldDist: 31.767
+arrive destination: False ,out of road:True   Total T: 78488 Episode Num: 230 Episode T: 412 Reward: 271.992 Cost: 17.000 ShieldInt: 80 ShieldDist: 66.983
+arrive destination: False ,out of road:False   Total T: 79488 Episode Num: 231 Episode T: 1000 Reward: 68.640 Cost: 2.000 ShieldInt: 907 ShieldDist: 1720.940
+arrive destination: False ,out of road:True   Total T: 79842 Episode Num: 232 Episode T: 354 Reward: 316.821 Cost: 3.000 ShieldInt: 88 ShieldDist: 39.318

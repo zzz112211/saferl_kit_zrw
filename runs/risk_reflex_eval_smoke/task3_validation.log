@@ -1,0 +1,161 @@
+Task 3 validation started: Wed Jul  1 20:12:51 CST 2026
+PWD: /datapool/home/1001900174/home/DYJ/saferl_kit
+Python: Python 3.10.20
+
+===== python -m py_compile eval_qpsl_risk_reflex.py =====
+EXIT_STATUS: 0
+
+===== python -m pytest tests/test_risk_reflex.py -q =====
+.........                                                                [100%]
+9 passed in 0.82s
+EXIT_STATUS: 0
+
+===== python eval_qpsl_risk_reflex.py --model_tag paper_1m_20260629_qpsl_seed0 --variant baseline --seed 0 --eval_episodes 2 --out_dir runs/risk_reflex_eval_smoke =====
+/datapool/home/1001900174/home/DYJ/SafeMetaDrive/.conda-env/safemetadrive-omnisafe/lib/python3.10/importlib/__init__.py:126: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  return _bootstrap._gcd_import(name[level:], package, level)
+/datapool/home/1001900174/home/DYJ/saferl_kit/metadrive/utils/config.py:213: DeprecationWarning: `np.float` is a deprecated alias for the builtin `float`. To silence this warning, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(value, (np.float32, np.float64, np.float)):
+/datapool/home/1001900174/home/DYJ/saferl_kit/metadrive/utils/config.py:215: DeprecationWarning: `np.int` is a deprecated alias for the builtin `int`. To silence this warning, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(value, (np.int, np.int32, np.int64, np.uint)):
+/datapool/home/1001900174/home/DYJ/saferl_kit/metadrive/component/vehicle_module/lidar.py:83: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  mask = np.zeros((self.num_lasers, ), dtype=np.bool)
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+Successfully registered the following environments: ['MetaDrive-validation-v0', 'MetaDrive-10env-v0', 'MetaDrive-100envs-v0', 'MetaDrive-1000envs-v0', 'SafeMetaDrive-validation-v0', 'SafeMetaDrive-10env-v0', 'SafeMetaDrive-100envs-v0', 'SafeMetaDrive-1000envs-v0', 'MARLTollgate-v0', 'MARLBottleneck-v0', 'MARLRoundabout-v0', 'MARLIntersection-v0', 'MARLParkingLot-v0', 'MARLMetaDrive-v0'].
+{'variant': 'longitudinal', 'seed': 0, 'model_tag': 'paper_1m_20260629_qpsl_seed0', 'alpha': 0.92, 'beta': 0.45, 'gamma': 0.08, 'theta': 0.45, 'lambda_brake': 0.25, 'lambda_throttle': 0.35, 'eval_episodes': 2, 'SuccessRate': 1.0, 'EpCost': 7.0, 'CostRate': 0.019886363636363636, 'mean_pain': 0.5149627552768339, 'trigger_rate': 0.5127840909090909, 'mean_longitudinal_delta': 0.19424874461335342, 'steering_limit_rate': 0.0}
+/datapool/home/1001900174/home/DYJ/SafeMetaDrive/.conda-env/safemetadrive-omnisafe/lib/python3.10/importlib/__init__.py:126: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  return _bootstrap._gcd_import(name[level:], package, level)
+/datapool/home/1001900174/home/DYJ/saferl_kit/metadrive/utils/config.py:213: DeprecationWarning: `np.float` is a deprecated alias for the builtin `float`. To silence this warning, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(value, (np.float32, np.float64, np.float)):
+/datapool/home/1001900174/home/DYJ/saferl_kit/metadrive/utils/config.py:215: DeprecationWarning: `np.int` is a deprecated alias for the builtin `int`. To silence this warning, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(value, (np.int, np.int32, np.int64, np.uint)):
+/datapool/home/1001900174/home/DYJ/saferl_kit/metadrive/component/vehicle_module/lidar.py:83: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  mask = np.zeros((self.num_lasers, ), dtype=np.bool)
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+Successfully registered the following environments: ['MetaDrive-validation-v0', 'MetaDrive-10env-v0', 'MetaDrive-100envs-v0', 'MetaDrive-1000envs-v0', 'SafeMetaDrive-validation-v0', 'SafeMetaDrive-10env-v0', 'SafeMetaDrive-100envs-v0', 'SafeMetaDrive-1000envs-v0', 'MARLTollgate-v0', 'MARLBottleneck-v0', 'MARLRoundabout-v0', 'MARLIntersection-v0', 'MARLParkingLot-v0', 'MARLMetaDrive-v0'].
+{'variant': 'baseline', 'seed': 0, 'model_tag': 'paper_1m_20260629_qpsl_seed0', 'alpha': 0.92, 'beta': 0.45, 'gamma': 0.08, 'theta': 0.45, 'lambda_brake': 0.35, 'lambda_throttle': 0.35, 'eval_episodes': 2, 'SuccessRate': 0.5, 'EpCost': 22.0, 'CostRate': 0.07108239095315025, 'mean_pain': 0.0, 'trigger_rate': 0.0, 'mean_longitudinal_delta': 0.0, 'steering_limit_rate': 0.0}
+EXIT_STATUS: 0
+
+===== python eval_qpsl_risk_reflex.py --model_tag paper_1m_20260629_qpsl_seed0 --variant longitudinal --seed 0 --eval_episodes 2 --theta 0.45 --lambda_brake 0.25 --out_dir runs/risk_reflex_eval_smoke =====
+/datapool/home/1001900174/home/DYJ/SafeMetaDrive/.conda-env/safemetadrive-omnisafe/lib/python3.10/importlib/__init__.py:126: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  return _bootstrap._gcd_import(name[level:], package, level)
+/datapool/home/1001900174/home/DYJ/saferl_kit/metadrive/utils/config.py:213: DeprecationWarning: `np.float` is a deprecated alias for the builtin `float`. To silence this warning, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(value, (np.float32, np.float64, np.float)):
+/datapool/home/1001900174/home/DYJ/saferl_kit/metadrive/utils/config.py:215: DeprecationWarning: `np.int` is a deprecated alias for the builtin `int`. To silence this warning, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(value, (np.int, np.int32, np.int64, np.uint)):
+/datapool/home/1001900174/home/DYJ/saferl_kit/metadrive/component/vehicle_module/lidar.py:83: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  mask = np.zeros((self.num_lasers, ), dtype=np.bool)
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+Successfully registered the following environments: ['MetaDrive-validation-v0', 'MetaDrive-10env-v0', 'MetaDrive-100envs-v0', 'MetaDrive-1000envs-v0', 'SafeMetaDrive-validation-v0', 'SafeMetaDrive-10env-v0', 'SafeMetaDrive-100envs-v0', 'SafeMetaDrive-1000envs-v0', 'MARLTollgate-v0', 'MARLBottleneck-v0', 'MARLRoundabout-v0', 'MARLIntersection-v0', 'MARLParkingLot-v0', 'MARLMetaDrive-v0'].
+{'variant': 'steering_limit', 'seed': 0, 'model_tag': 'paper_1m_20260629_qpsl_seed0', 'alpha': 0.92, 'beta': 0.45, 'gamma': 0.08, 'theta': 0.45, 'lambda_brake': 0.25, 'lambda_throttle': 0.35, 'eval_episodes': 2, 'SuccessRate': 1.0, 'EpCost': 2.5, 'CostRate': 0.011185682326621925, 'mean_pain': 0.3873820387875997, 'trigger_rate': 0.3825503355704698, 'mean_longitudinal_delta': 0.20925995111580045, 'steering_limit_rate': 0.1029082774049217}
+/datapool/home/1001900174/home/DYJ/SafeMetaDrive/.conda-env/safemetadrive-omnisafe/lib/python3.10/importlib/__init__.py:126: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  return _bootstrap._gcd_import(name[level:], package, level)
+/datapool/home/1001900174/home/DYJ/saferl_kit/metadrive/utils/config.py:213: DeprecationWarning: `np.float` is a deprecated alias for the builtin `float`. To silence this warning, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(value, (np.float32, np.float64, np.float)):
+/datapool/home/1001900174/home/DYJ/saferl_kit/metadrive/utils/config.py:215: DeprecationWarning: `np.int` is a deprecated alias for the builtin `int`. To silence this warning, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(value, (np.int, np.int32, np.int64, np.uint)):
+/datapool/home/1001900174/home/DYJ/saferl_kit/metadrive/component/vehicle_module/lidar.py:83: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  mask = np.zeros((self.num_lasers, ), dtype=np.bool)
+Successfully registered the following environments: ['MetaDrive-validation-v0', 'MetaDrive-10env-v0', 'MetaDrive-100envs-v0', 'MetaDrive-1000envs-v0', 'SafeMetaDrive-validation-v0', 'SafeMetaDrive-10env-v0', 'SafeMetaDrive-100envs-v0', 'SafeMetaDrive-1000envs-v0', 'MARLTollgate-v0', 'MARLBottleneck-v0', 'MARLRoundabout-v0', 'MARLIntersection-v0', 'MARLParkingLot-v0', 'MARLMetaDrive-v0'].
+{'variant': 'longitudinal', 'seed': 0, 'model_tag': 'paper_1m_20260629_qpsl_seed0', 'alpha': 0.92, 'beta': 0.45, 'gamma': 0.08, 'theta': 0.45, 'lambda_brake': 0.25, 'lambda_throttle': 0.35, 'eval_episodes': 2, 'SuccessRate': 1.0, 'EpCost': 5.0, 'CostRate': 0.013089005235602094, 'mean_pain': 0.4264535678466542, 'trigger_rate': 0.42277486910994766, 'mean_longitudinal_delta': 0.23508834938825893, 'steering_limit_rate': 0.0}
+EXIT_STATUS: 0
+
+===== python eval_qpsl_risk_reflex.py --model_tag paper_1m_20260629_qpsl_seed0 --variant steering_limit --seed 0 --eval_episodes 2 --theta 0.45 --lambda_brake 0.25 --out_dir runs/risk_reflex_eval_smoke =====
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+/datapool/home/1001900174/home/DYJ/SafeMetaDrive/.conda-env/safemetadrive-omnisafe/lib/python3.10/importlib/__init__.py:126: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  return _bootstrap._gcd_import(name[level:], package, level)
+/datapool/home/1001900174/home/DYJ/saferl_kit/metadrive/utils/config.py:213: DeprecationWarning: `np.float` is a deprecated alias for the builtin `float`. To silence this warning, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(value, (np.float32, np.float64, np.float)):
+/datapool/home/1001900174/home/DYJ/saferl_kit/metadrive/utils/config.py:215: DeprecationWarning: `np.int` is a deprecated alias for the builtin `int`. To silence this warning, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(value, (np.int, np.int32, np.int64, np.uint)):
+/datapool/home/1001900174/home/DYJ/saferl_kit/metadrive/component/vehicle_module/lidar.py:83: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  mask = np.zeros((self.num_lasers, ), dtype=np.bool)
+Successfully registered the following environments: ['MetaDrive-validation-v0', 'MetaDrive-10env-v0', 'MetaDrive-100envs-v0', 'MetaDrive-1000envs-v0', 'SafeMetaDrive-validation-v0', 'SafeMetaDrive-10env-v0', 'SafeMetaDrive-100envs-v0', 'SafeMetaDrive-1000envs-v0', 'MARLTollgate-v0', 'MARLBottleneck-v0', 'MARLRoundabout-v0', 'MARLIntersection-v0', 'MARLParkingLot-v0', 'MARLMetaDrive-v0'].
+{'variant': 'steering_limit', 'seed': 0, 'model_tag': 'paper_1m_20260629_qpsl_seed0', 'alpha': 0.92, 'beta': 0.45, 'gamma': 0.08, 'theta': 0.45, 'lambda_brake': 0.25, 'lambda_throttle': 0.35, 'eval_episodes': 2, 'SuccessRate': 1.0, 'EpCost': 9.5, 'CostRate': 0.03236797274275979, 'mean_pain': 0.3963272809743823, 'trigger_rate': 0.393526405451448, 'mean_longitudinal_delta': 0.18854353246255262, 'steering_limit_rate': 0.10902896081771721}
+===== Task 3 validation start 2026-07-01T21:04:33+08:00 =====
+PWD=/datapool/home/1001900174/home/DYJ/saferl_kit
+PYTHON=/datapool/home/1001900174/home/DYJ/saferl_kit/.venv-saferlkit/bin/python
+Python 3.10.20
+===== CMD: python -m py_compile eval_qpsl_risk_reflex.py =====
+===== STATUS: 0 : python -m py_compile eval_qpsl_risk_reflex.py =====
+===== CMD: python -m pytest tests/test_risk_reflex.py -q =====
+.........                                                                [100%]
+9 passed in 0.98s
+===== STATUS: 0 : python -m pytest tests/test_risk_reflex.py -q =====
+===== CMD: python eval_qpsl_risk_reflex.py --model_tag paper_1m_20260629_qpsl_seed0 --variant baseline --seed 0 --eval_episodes 2 --out_dir runs/risk_reflex_eval_smoke =====
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+/datapool/home/1001900174/home/DYJ/SafeMetaDrive/.conda-env/safemetadrive-omnisafe/lib/python3.10/importlib/__init__.py:126: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  return _bootstrap._gcd_import(name[level:], package, level)
+/datapool/home/1001900174/home/DYJ/saferl_kit/metadrive/utils/config.py:213: DeprecationWarning: `np.float` is a deprecated alias for the builtin `float`. To silence this warning, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(value, (np.float32, np.float64, np.float)):
+/datapool/home/1001900174/home/DYJ/saferl_kit/metadrive/utils/config.py:215: DeprecationWarning: `np.int` is a deprecated alias for the builtin `int`. To silence this warning, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(value, (np.int, np.int32, np.int64, np.uint)):
+/datapool/home/1001900174/home/DYJ/saferl_kit/metadrive/component/vehicle_module/lidar.py:83: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  mask = np.zeros((self.num_lasers, ), dtype=np.bool)
+Successfully registered the following environments: ['MetaDrive-validation-v0', 'MetaDrive-10env-v0', 'MetaDrive-100envs-v0', 'MetaDrive-1000envs-v0', 'SafeMetaDrive-validation-v0', 'SafeMetaDrive-10env-v0', 'SafeMetaDrive-100envs-v0', 'SafeMetaDrive-1000envs-v0', 'MARLTollgate-v0', 'MARLBottleneck-v0', 'MARLRoundabout-v0', 'MARLIntersection-v0', 'MARLParkingLot-v0', 'MARLMetaDrive-v0'].
+{'variant': 'baseline', 'seed': 0, 'model_tag': 'paper_1m_20260629_qpsl_seed0', 'alpha': 0.92, 'beta': 0.45, 'gamma': 0.08, 'theta': 0.45, 'lambda_brake': 0.35, 'lambda_throttle': 0.35, 'eval_episodes': 2, 'SuccessRate': 0.5, 'EpCost': 15.5, 'CostRate': 0.05326460481099656, 'mean_pain': 0.0, 'trigger_rate': 0.0, 'mean_longitudinal_delta': 0.0, 'steering_limit_rate': 0.0}
+===== STATUS: 0 : python eval_qpsl_risk_reflex.py --model_tag paper_1m_20260629_qpsl_seed0 --variant baseline --seed 0 --eval_episodes 2 --out_dir runs/risk_reflex_eval_smoke =====
+===== CMD: python eval_qpsl_risk_reflex.py --model_tag paper_1m_20260629_qpsl_seed0 --variant longitudinal --seed 0 --eval_episodes 2 --theta 0.45 --lambda_brake 0.25 --out_dir runs/risk_reflex_eval_smoke =====
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+/datapool/home/1001900174/home/DYJ/SafeMetaDrive/.conda-env/safemetadrive-omnisafe/lib/python3.10/importlib/__init__.py:126: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  return _bootstrap._gcd_import(name[level:], package, level)
+/datapool/home/1001900174/home/DYJ/saferl_kit/metadrive/utils/config.py:213: DeprecationWarning: `np.float` is a deprecated alias for the builtin `float`. To silence this warning, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(value, (np.float32, np.float64, np.float)):
+/datapool/home/1001900174/home/DYJ/saferl_kit/metadrive/utils/config.py:215: DeprecationWarning: `np.int` is a deprecated alias for the builtin `int`. To silence this warning, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(value, (np.int, np.int32, np.int64, np.uint)):
+/datapool/home/1001900174/home/DYJ/saferl_kit/metadrive/component/vehicle_module/lidar.py:83: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  mask = np.zeros((self.num_lasers, ), dtype=np.bool)
+Successfully registered the following environments: ['MetaDrive-validation-v0', 'MetaDrive-10env-v0', 'MetaDrive-100envs-v0', 'MetaDrive-1000envs-v0', 'SafeMetaDrive-validation-v0', 'SafeMetaDrive-10env-v0', 'SafeMetaDrive-100envs-v0', 'SafeMetaDrive-1000envs-v0', 'MARLTollgate-v0', 'MARLBottleneck-v0', 'MARLRoundabout-v0', 'MARLIntersection-v0', 'MARLParkingLot-v0', 'MARLMetaDrive-v0'].
+{'variant': 'longitudinal', 'seed': 0, 'model_tag': 'paper_1m_20260629_qpsl_seed0', 'alpha': 0.92, 'beta': 0.45, 'gamma': 0.08, 'theta': 0.45, 'lambda_brake': 0.25, 'lambda_throttle': 0.35, 'eval_episodes': 2, 'SuccessRate': 0.5, 'EpCost': 3.0, 'CostRate': 0.012371134020618556, 'mean_pain': 0.4490374346649023, 'trigger_rate': 0.44742268041237115, 'mean_longitudinal_delta': 0.2428068251281823, 'steering_limit_rate': 0.0}
+===== STATUS: 0 : python eval_qpsl_risk_reflex.py --model_tag paper_1m_20260629_qpsl_seed0 --variant longitudinal --seed 0 --eval_episodes 2 --theta 0.45 --lambda_brake 0.25 --out_dir runs/risk_reflex_eval_smoke =====
+===== CMD: python eval_qpsl_risk_reflex.py --model_tag paper_1m_20260629_qpsl_seed0 --variant steering_limit --seed 0 --eval_episodes 2 --theta 0.45 --lambda_brake 0.25 --out_dir runs/risk_reflex_eval_smoke =====
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+/datapool/home/1001900174/home/DYJ/SafeMetaDrive/.conda-env/safemetadrive-omnisafe/lib/python3.10/importlib/__init__.py:126: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  return _bootstrap._gcd_import(name[level:], package, level)
+/datapool/home/1001900174/home/DYJ/saferl_kit/metadrive/utils/config.py:213: DeprecationWarning: `np.float` is a deprecated alias for the builtin `float`. To silence this warning, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(value, (np.float32, np.float64, np.float)):
+/datapool/home/1001900174/home/DYJ/saferl_kit/metadrive/utils/config.py:215: DeprecationWarning: `np.int` is a deprecated alias for the builtin `int`. To silence this warning, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(value, (np.int, np.int32, np.int64, np.uint)):
+/datapool/home/1001900174/home/DYJ/saferl_kit/metadrive/component/vehicle_module/lidar.py:83: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  mask = np.zeros((self.num_lasers, ), dtype=np.bool)
+Successfully registered the following environments: ['MetaDrive-validation-v0', 'MetaDrive-10env-v0', 'MetaDrive-100envs-v0', 'MetaDrive-1000envs-v0', 'SafeMetaDrive-validation-v0', 'SafeMetaDrive-10env-v0', 'SafeMetaDrive-100envs-v0', 'SafeMetaDrive-1000envs-v0', 'MARLTollgate-v0', 'MARLBottleneck-v0', 'MARLRoundabout-v0', 'MARLIntersection-v0', 'MARLParkingLot-v0', 'MARLMetaDrive-v0'].
+{'variant': 'steering_limit', 'seed': 0, 'model_tag': 'paper_1m_20260629_qpsl_seed0', 'alpha': 0.92, 'beta': 0.45, 'gamma': 0.08, 'theta': 0.45, 'lambda_brake': 0.25, 'lambda_throttle': 0.35, 'eval_episodes': 2, 'SuccessRate': 0.0, 'EpCost': 4.5, 'CostRate': 0.03614457831325301, 'mean_pain': 0.19510412810529137, 'trigger_rate': 0.19678714859437751, 'mean_longitudinal_delta': 0.08656915277990711, 'steering_limit_rate': 0.08433734939759036}
+===== STATUS: 0 : python eval_qpsl_risk_reflex.py --model_tag paper_1m_20260629_qpsl_seed0 --variant steering_limit --seed 0 --eval_episodes 2 --theta 0.45 --lambda_brake 0.25 --out_dir runs/risk_reflex_eval_smoke =====
+===== Task 3 validation commands complete 2026-07-01T21:26:08+08:00 =====

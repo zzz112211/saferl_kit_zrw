@@ -1,0 +1,3 @@
+variant,alpha,beta,gamma,theta,k,lambda_brake,lambda_throttle,steering_limit_gain,min_steering_scale,trigger_threshold,eval_episodes,seed_count,source_count,complete,SuccessRate_mean,SuccessRate_ci95,EpCost_mean,EpCost_ci95,CostRate_mean,CostRate_ci95,mean_pain_mean,mean_pain_ci95,trigger_rate_mean,trigger_rate_ci95,mean_longitudinal_delta_mean,mean_longitudinal_delta_ci95,steering_limit_rate_mean,steering_limit_rate_ci95
+baseline,0.92,0.45,0.08,0.45,12,0.35,0.35,0.5,0.35,0.5,1,1,1,true,1.0,0.0,15.0,0.0,0.05226480836236934,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+longitudinal,0.92,0.45,0.08,0.45,12,0.25,0.35,0.5,0.35,0.5,1,1,1,true,1.0,0.0,4.0,0.0,0.018691588785046728,0.0,0.32469804835048854,0.0,0.3177570093457944,0.0,0.16998138698253118,0.0,0.0,0.0

@@ -1,0 +1,2 @@
+episode,variant,seed,model_tag,steps,arrive_dest,EpCost,cost_events,CostRate,mean_pain,trigger_rate,mean_longitudinal_delta,steering_limit_rate
+0,longitudinal,0,paper_1m_20260629_qpsl_seed0,214,1.0,4.0,4,0.018691588785046728,0.32469804835048854,0.3177570093457944,0.16998138698253118,0.0

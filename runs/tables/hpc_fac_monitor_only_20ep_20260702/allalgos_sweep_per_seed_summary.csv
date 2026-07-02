@@ -1,0 +1,11 @@
+algo,train_seed,candidate,frontend,success_rate,clean_success_rate,mean_reward,mean_episode_cost,mean_cost_rate,crash_rate,out_of_road_rate,out_of_time_rate,intervention_ratio,mean_action_distortion
+fac,0,none,none,0.65,0.15,289.71935541607684,3.6,0.012213810361512959,0.7,0.3,0.0,0.0,0.0
+fac,0,nocicim_monitor_only,nocicim_risk_field,0.65,0.15,289.71935541607684,3.6,0.012213810361512959,0.7,0.3,0.0,0.0,0.0
+fac,1,none,none,0.7,0.25,304.06387344395336,4.3,0.011677224078736954,0.6,0.3,0.0,0.0,0.0
+fac,1,nocicim_monitor_only,nocicim_risk_field,0.7,0.25,304.06387344395336,4.3,0.011677224078736954,0.6,0.3,0.0,0.0,0.0
+fac,2,none,none,0.7,0.25,297.52340967909134,3.65,0.011275508622911335,0.55,0.25,0.0,0.0,0.0
+fac,2,nocicim_monitor_only,nocicim_risk_field,0.7,0.25,297.52340967909134,3.65,0.011275508622911335,0.55,0.25,0.0,0.0,0.0
+fac,3,none,none,0.45,0.3,252.8575498755086,4.1,0.010283982328175869,0.35,0.45,0.0,0.0,0.0
+fac,3,nocicim_monitor_only,nocicim_risk_field,0.45,0.3,252.8575498755086,4.1,0.010283982328175869,0.35,0.45,0.0,0.0,0.0
+fac,4,none,none,0.65,0.25,277.3955221118237,1.85,0.006825913233361075,0.5,0.35,0.0,0.0,0.0
+fac,4,nocicim_monitor_only,nocicim_risk_field,0.65,0.25,277.3955221118237,1.85,0.006825913233361075,0.5,0.35,0.0,0.0,0.0

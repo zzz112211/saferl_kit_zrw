@@ -1,0 +1,2 @@
+variant,seed,model_tag,alpha,beta,gamma,theta,lambda_brake,lambda_throttle,eval_episodes,SuccessRate,EpCost,CostRate,mean_pain,trigger_rate,mean_longitudinal_delta,steering_limit_rate
+steering_limit,0,paper_1m_20260629_qpsl_seed0,0.92,0.45,0.08,0.45,0.25,0.35,2,0.0,4.5,0.03614457831325301,0.19510412810529137,0.19678714859437751,0.08656915277990711,0.08433734939759036

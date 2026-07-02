@@ -1,0 +1,6 @@
+total commands: 365
+selected commands: 1
+running: /datapool/home/1001900174/home/DYJ/saferl_kit/.venv-saferlkit/bin/python /datapool/home/1001900174/home/DYJ/saferl_kit/eval_qpsl_risk_reflex.py --variant baseline --model_tag paper_1m_20260629_qpsl_seed2 --seed 2 --eval_episodes 20 --out_dir runs/risk_reflex_screen_20260701
+Successfully registered the following environments: ['MetaDrive-validation-v0', 'MetaDrive-10env-v0', 'MetaDrive-100envs-v0', 'MetaDrive-1000envs-v0', 'SafeMetaDrive-validation-v0', 'SafeMetaDrive-10env-v0', 'SafeMetaDrive-100envs-v0', 'SafeMetaDrive-1000envs-v0', 'MARLTollgate-v0', 'MARLBottleneck-v0', 'MARLRoundabout-v0', 'MARLIntersection-v0', 'MARLParkingLot-v0', 'MARLMetaDrive-v0'].
+{'variant': 'baseline', 'seed': 2, 'model_tag': 'paper_1m_20260629_qpsl_seed2', 'alpha': 0.92, 'beta': 0.45, 'gamma': 0.08, 'theta': 0.45, 'k': 12.0, 'lambda_brake': 0.35, 'lambda_throttle': 0.35, 'steering_limit_gain': 0.5, 'min_steering_scale': 0.35, 'trigger_threshold': 0.5, 'eval_episodes': 20, 'SuccessRate': 0.9, 'EpCost': 14.45, 'CostRate': 0.052766112835493886, 'mean_pain': 0.0, 'trigger_rate': 0.0, 'mean_longitudinal_delta': 0.0, 'steering_limit_rate': 0.0}
+completed 1 evaluation runs

@@ -1,0 +1,36 @@
+Running crash-aware NociCIM sweep: tag=eval_allalgos_crash_aware_portfolio_20260702 algo=qpsl train_seed=3 episodes=20
+Successfully registered the following environments: ['MetaDrive-validation-v0', 'MetaDrive-10env-v0', 'MetaDrive-100envs-v0', 'MetaDrive-1000envs-v0', 'SafeMetaDrive-validation-v0', 'SafeMetaDrive-10env-v0', 'SafeMetaDrive-100envs-v0', 'SafeMetaDrive-1000envs-v0', 'MARLTollgate-v0', 'MARLBottleneck-v0', 'MARLRoundabout-v0', 'MARLIntersection-v0', 'MARLParkingLot-v0', 'MARLMetaDrive-v0'].
+{
+  "algo": "qpsl",
+  "best": {
+    "baseline_dominant_gain": 1,
+    "candidate": "nocicim_close_range",
+    "clean_success_delta": 0.05,
+    "clean_success_rate": 0.1,
+    "crash_rate": 0.85,
+    "crash_rate_reduction": 0.050000000000000044,
+    "episode_cost_reduction": 5.950000000000001,
+    "episodes": 20,
+    "frontend": "nocicim_risk_field",
+    "intervention_ratio": 0.16761765815328378,
+    "mean_action_distortion": 0.12155434144487928,
+    "mean_cost_rate": 0.026401436595004973,
+    "mean_episode_cost": 9.6,
+    "mean_reward": 337.67201268479823,
+    "mode": "qpsl+nocicim_close_range",
+    "out_of_road_rate": 0.1,
+    "out_of_road_reduction": 0.1,
+    "out_of_time_rate": 0.0,
+    "overrides_json": "{\"front_distance_threshold_m\": 6.0, \"front_gain\": 0.06, \"front_slow_threshold\": 0.88, \"front_slow_throttle_cap\": 0.9, \"lateral_distance_threshold_m\": 3.5, \"lateral_gain\": 0.1, \"lateral_guard_threshold\": 0.9, \"lateral_steer_threshold\": 0.7, \"lateral_steering_cap\": 0.9, \"lateral_throttle_cap\": 0.55, \"lateral_throttle_threshold\": 0.8, \"slow_front_risk_threshold\": 0.7, \"stop_distance_m\": 2.5, \"stop_front_risk_threshold\": 0.92}",
+    "reward_delta": 28.006402104816686,
+    "safe_success_gain": 1,
+    "score": 35.80032010524083,
+    "success_delta": 0.1499999999999999,
+    "success_rate": 0.95
+  },
+  "best_frontend": "nocicim_risk_field",
+  "checkpoint": "models/paper_1m_20260629_qpsl_seed3",
+  "episodes": 20,
+  "note": "baseline_dominant_gain means success>=baseline, clean_success>=baseline, and mean episode cost lower than baseline. risk_field_reference is reported only as a reference when included.",
+  "start_seed": 100
+}

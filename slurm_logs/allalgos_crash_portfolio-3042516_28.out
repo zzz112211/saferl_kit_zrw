@@ -1,0 +1,36 @@
+Running crash-aware NociCIM sweep: tag=eval_fac_monitor_only_20260702 algo=fac train_seed=3 episodes=20
+Successfully registered the following environments: ['MetaDrive-validation-v0', 'MetaDrive-10env-v0', 'MetaDrive-100envs-v0', 'MetaDrive-1000envs-v0', 'SafeMetaDrive-validation-v0', 'SafeMetaDrive-10env-v0', 'SafeMetaDrive-100envs-v0', 'SafeMetaDrive-1000envs-v0', 'MARLTollgate-v0', 'MARLBottleneck-v0', 'MARLRoundabout-v0', 'MARLIntersection-v0', 'MARLParkingLot-v0', 'MARLMetaDrive-v0'].
+{
+  "algo": "fac",
+  "best": {
+    "baseline_dominant_gain": 0,
+    "candidate": "nocicim_monitor_only",
+    "clean_success_delta": 0.0,
+    "clean_success_rate": 0.3,
+    "crash_rate": 0.35,
+    "crash_rate_reduction": 0.0,
+    "episode_cost_reduction": 0.0,
+    "episodes": 20,
+    "frontend": "nocicim_risk_field",
+    "intervention_ratio": 0.0,
+    "mean_action_distortion": 0.0,
+    "mean_cost_rate": 0.010283982328175869,
+    "mean_episode_cost": 4.1,
+    "mean_reward": 252.8575498755086,
+    "mode": "fac+nocicim_monitor_only",
+    "out_of_road_rate": 0.45,
+    "out_of_road_reduction": 0.0,
+    "out_of_time_rate": 0.0,
+    "overrides_json": "{\"allow_direct_stop\": false, \"front_decay\": 0.0, \"front_distance_threshold_m\": 6.0, \"front_gain\": 0.0, \"front_slow_threshold\": 1.01, \"front_slow_throttle_cap\": 1.0, \"lateral_decay\": 0.0, \"lateral_distance_threshold_m\": 2.0, \"lateral_gain\": 0.0, \"lateral_guard_threshold\": 1.01, \"lateral_steer_threshold\": 1.01, \"lateral_steering_cap\": 1.0, \"lateral_throttle_cap\": 1.0, \"lateral_throttle_threshold\": 1.01, \"min_front_risk_for_stop\": 1.01, \"min_lateral_risk_for_guard\": 1.01, \"require_memory_for_stop\": false, \"require_risk_for_lateral_guard\": true, \"slow_front_risk_threshold\": 1.01, \"slow_throttle_cap\": 1.0, \"stop_distance_m\": 1.0, \"stop_front_risk_threshold\": 1.01}",
+    "reward_delta": 0.0,
+    "safe_success_gain": 0,
+    "score": 0.0,
+    "success_delta": 0.0,
+    "success_rate": 0.45
+  },
+  "best_frontend": "nocicim_risk_field",
+  "checkpoint": "models/paper_1m_20260629_fac_seed3",
+  "episodes": 20,
+  "note": "baseline_dominant_gain means success>=baseline, clean_success>=baseline, and mean episode cost lower than baseline. risk_field_reference is reported only as a reference when included.",
+  "start_seed": 100
+}

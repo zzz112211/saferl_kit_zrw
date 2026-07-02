@@ -1,0 +1,35 @@
+Successfully registered the following environments: ['MetaDrive-validation-v0', 'MetaDrive-10env-v0', 'MetaDrive-100envs-v0', 'MetaDrive-1000envs-v0', 'SafeMetaDrive-validation-v0', 'SafeMetaDrive-10env-v0', 'SafeMetaDrive-100envs-v0', 'SafeMetaDrive-1000envs-v0', 'MARLTollgate-v0', 'MARLBottleneck-v0', 'MARLRoundabout-v0', 'MARLIntersection-v0', 'MARLParkingLot-v0', 'MARLMetaDrive-v0'].
+{
+  "algo": "td3",
+  "best": {
+    "baseline_dominant_gain": 0,
+    "candidate": "nocicim_route_preserve",
+    "clean_success_delta": -0.05,
+    "clean_success_rate": 0.05,
+    "crash_rate": 0.85,
+    "crash_rate_reduction": -0.04999999999999993,
+    "episode_cost_reduction": 3.5,
+    "episodes": 20,
+    "frontend": "nocicim_risk_field",
+    "intervention_ratio": 0.08614556212121524,
+    "mean_action_distortion": 0.06681864852468034,
+    "mean_cost_rate": 0.036822319460639005,
+    "mean_episode_cost": 11.35,
+    "mean_reward": 283.30027849701565,
+    "mode": "td3+nocicim_route_preserve",
+    "out_of_road_rate": 0.35,
+    "out_of_road_reduction": 0.0,
+    "out_of_time_rate": 0.0,
+    "overrides_json": "{\"front_decay\": 0.65, \"front_distance_threshold_m\": 6.0, \"front_gain\": 0.04, \"front_slow_threshold\": 0.92, \"front_slow_throttle_cap\": 0.92, \"lateral_decay\": 0.65, \"lateral_distance_threshold_m\": 3.0, \"lateral_gain\": 0.04, \"lateral_guard_threshold\": 0.95, \"lateral_steer_threshold\": 0.85, \"lateral_steering_cap\": 1.0, \"lateral_throttle_cap\": 0.75, \"lateral_throttle_threshold\": 0.9, \"slow_front_risk_threshold\": 0.85, \"slow_throttle_cap\": 0.9, \"stop_distance_m\": 2.0, \"stop_front_risk_threshold\": 0.98}",
+    "reward_delta": -9.932972365574358,
+    "safe_success_gain": 1,
+    "score": 1.003351381721284,
+    "success_delta": 0.0,
+    "success_rate": 0.65
+  },
+  "best_frontend": "nocicim_risk_field",
+  "checkpoint": "models/paper_1m_20260629_td3_seed3",
+  "episodes": 20,
+  "note": "baseline_dominant_gain means success>=baseline, clean_success>=baseline, and mean episode cost lower than baseline. risk_field_reference is reported only as a reference when included.",
+  "start_seed": 100
+}
